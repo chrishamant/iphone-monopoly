@@ -18,6 +18,7 @@
 		830E69580F927ED4005D1E44 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830E69540F927ED4005D1E44 /* GameController.m */; };
 		830E69590F927ED4005D1E44 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 830E69570F927ED4005D1E44 /* Player.m */; };
 		831A82160F8949C600ACCE76 /* Die.m in Sources */ = {isa = PBXBuildFile; fileRef = 831A82150F8949C600ACCE76 /* Die.m */; };
+		839B71E30F9BADF8007C2A7C /* Monopoly.xcclassmodel in Resources */ = {isa = PBXBuildFile; fileRef = 839B71E20F9BADF8007C2A7C /* Monopoly.xcclassmodel */; };
 		839CF9DA0F89B13B001505FD /* GameBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 839CF9D90F89B13B001505FD /* GameBoard.m */; };
 		839CF9E00F89B2B2001505FD /* GameBoardSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 839CF9DF0F89B2B2001505FD /* GameBoardSpace.m */; };
 		83D34F1E0F929E5E000EAB0C /* ChooseNumPlayers.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D34F1D0F929E5E000EAB0C /* ChooseNumPlayers.xib */; };
@@ -45,6 +46,7 @@
 		830E69570F927ED4005D1E44 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		831A82140F8949C600ACCE76 /* Die.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Die.h; sourceTree = "<group>"; };
 		831A82150F8949C600ACCE76 /* Die.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Die.m; sourceTree = "<group>"; };
+		839B71E20F9BADF8007C2A7C /* Monopoly.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = Monopoly.xcclassmodel; sourceTree = "<group>"; };
 		839CF9D80F89B13B001505FD /* GameBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBoard.h; sourceTree = "<group>"; };
 		839CF9D90F89B13B001505FD /* GameBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBoard.m; sourceTree = "<group>"; };
 		839CF9DE0F89B2B2001505FD /* GameBoardSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBoardSpace.h; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				839B71E20F9BADF8007C2A7C /* Monopoly.xcclassmodel */,
 				28C3AD890F43EF2300507BA6 /* Monopoly.xcdatamodel */,
 				8D1107310486CEB800E47090 /* Monopoly-Info.plist */,
 			);
@@ -234,6 +237,7 @@
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				83D34F1E0F929E5E000EAB0C /* ChooseNumPlayers.xib in Resources */,
 				83D351970F92C792000EAB0C /* PlayerNames.xib in Resources */,
+				839B71E30F9BADF8007C2A7C /* Monopoly.xcclassmodel in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

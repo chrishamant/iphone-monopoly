@@ -6,7 +6,7 @@
 
 - (IBAction)chooseNumPlayers:(id)sender{
 	NSLog(@"Selected %d",selectedPlayers);
-	//[[self navigationController] pushViewController:[[[PlayerNames alloc] initWithNibName:@"PlayerNames" bundle:nil numPlayers:selectedPlayers] autorelease] animated:YES];
+	[[self navigationController] pushViewController:[[[PlayerNames alloc] initWithNumPlayers:selectedPlayers] autorelease] animated:YES];
 }
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.

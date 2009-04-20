@@ -8,13 +8,12 @@
 #import "PlayerNames.h"
 
 @implementation PlayerNames
-
 @synthesize playernames;
-//@synthesize playerlist;
 
-#pragma mark UIView actions
+#pragma mark UIViewController actions
 - (IBAction)startGame:(id)sender{
 	NSLog(@"Trying to Start Game");
+	//[[[self parentViewController] view] readyMonopolyGame:nil];
 }
 
 #pragma mark UIView overrides
@@ -61,10 +60,7 @@
     [super dealloc];
 }
 
-
-
 #pragma mark UITextFieldDelegate
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
 	[textField resignFirstResponder];
 	return YES;

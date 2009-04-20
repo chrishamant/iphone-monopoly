@@ -17,6 +17,7 @@
 	NSArray* players;
 	GameBoard* board;
 }
+
 -(int)rollDice;
 -(id)initWithPlayers:(NSArray*)players andUI:(id<GameControllerDelegate>) theDelgateController;
 -(void)startGame;

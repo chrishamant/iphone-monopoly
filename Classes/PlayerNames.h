@@ -6,7 +6,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PlayerNameController.h"
+#import "GameController.h"
 
 @interface PlayerNames : UIViewController<UITextFieldDelegate> {
 	int numPlayers;

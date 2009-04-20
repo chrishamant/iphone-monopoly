@@ -13,4 +13,11 @@
 @synthesize title;
 @synthesize currentSpace;
 
+-(id)initWithTitle:(NSString*)name{
+	if(self = [super init]){
+		[self setTitle:name];
+	}
+	return self;
+}
+
 @end

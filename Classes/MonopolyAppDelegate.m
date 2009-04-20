@@ -18,14 +18,17 @@
 - (void)applicationDidFinishLaunching:(UIApplication *)application {    
 	
     //initial view 
-	ChooseNumPlayersController* choose = [[ChooseNumPlayersController alloc] initWithNibName:@"ChooseNumPlayers" bundle:nil];
+	//ChooseNumPlayersController* choose = [[ChooseNumPlayersController alloc] initWithNibName:@"ChooseNumPlayers" bundle:nil];
 	
-	mainviewcontroller = [[UINavigationController alloc] initWithRootViewController:choose];
+	//mainviewcontroller = [[UINavigationController alloc] initWithRootViewController:choose];
 	
 	//release
-	[choose release];
+	//[choose release];
 	
-	[window addSubview:[mainviewcontroller view]];
+	//[window addSubview:[mainviewcontroller view]];
+	GameStartupScreen* startup = [[GameStartupScreen alloc] initWithNibName:@"GameStartupScreen" bundle:[NSBundle mainBundle]];
+	[[startup view] setFrame:CGRectMake(0,20, 320, 460)];
+	[window addSubview:[startup view]];
 	[window makeKeyAndVisible];
 }
 

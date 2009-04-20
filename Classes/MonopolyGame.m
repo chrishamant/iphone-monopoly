@@ -9,32 +9,9 @@
 
 
 @implementation MonopolyGame
+@synthesize players;
 
-/*
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        // Custom initialization
-    }
-    return self;
-}
-*/
-
-/*
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
-- (void)viewDidLoad {
-    [super viewDidLoad];
-}
-*/
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
+#pragma mark UIViewController Overrides
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -50,6 +27,14 @@
 
 - (void)dealloc {
     [super dealloc];
+}
+
+#pragma mark Implementation Methods
+- (id)initWithNibNameAndPlayers:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil players:(NSMutableArray*) theplayers{
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        [self setPlayers:theplayers];
+    }
+    return self;
 }
 
 

@@ -6,6 +6,7 @@
 //
 
 #import "ChooseNumPlayersController.h"
+#import "GameStartupScreen.h"
 
 @interface MonopolyAppDelegate : NSObject <UIApplicationDelegate> {
     NSManagedObjectModel *managedObjectModel;

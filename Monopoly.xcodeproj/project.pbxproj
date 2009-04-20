@@ -24,6 +24,8 @@
 		839B71E30F9BADF8007C2A7C /* Monopoly.xcclassmodel in Resources */ = {isa = PBXBuildFile; fileRef = 839B71E20F9BADF8007C2A7C /* Monopoly.xcclassmodel */; };
 		839CF9DA0F89B13B001505FD /* GameBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 839CF9D90F89B13B001505FD /* GameBoard.m */; };
 		839CF9E00F89B2B2001505FD /* GameBoardSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 839CF9DF0F89B2B2001505FD /* GameBoardSpace.m */; };
+		83BA2E050F9CFB12005A76F1 /* GameStartupScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */; };
+		83BA2E060F9CFB12005A76F1 /* GameStartupScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BA2E040F9CFB12005A76F1 /* GameStartupScreen.xib */; };
 		83D34F1E0F929E5E000EAB0C /* ChooseNumPlayers.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D34F1D0F929E5E000EAB0C /* ChooseNumPlayers.xib */; };
 		83D34F210F92A08B000EAB0C /* ChooseNumPlayersController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D34F1F0F92A08B000EAB0C /* ChooseNumPlayersController.m */; };
 		83D351960F92C792000EAB0C /* PlayerNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D351940F92C792000EAB0C /* PlayerNames.m */; };
@@ -57,6 +59,9 @@
 		839CF9D90F89B13B001505FD /* GameBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBoard.m; sourceTree = "<group>"; };
 		839CF9DE0F89B2B2001505FD /* GameBoardSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBoardSpace.h; sourceTree = "<group>"; };
 		839CF9DF0F89B2B2001505FD /* GameBoardSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBoardSpace.m; sourceTree = "<group>"; };
+		83BA2E020F9CFB12005A76F1 /* GameStartupScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartupScreen.h; sourceTree = "<group>"; };
+		83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartupScreen.m; sourceTree = "<group>"; };
+		83BA2E040F9CFB12005A76F1 /* GameStartupScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameStartupScreen.xib; sourceTree = "<group>"; };
 		83D34F1D0F929E5E000EAB0C /* ChooseNumPlayers.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChooseNumPlayers.xib; path = ../nibs/ChooseNumPlayers.xib; sourceTree = "<group>"; };
 		83D34F1F0F92A08B000EAB0C /* ChooseNumPlayersController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChooseNumPlayersController.m; sourceTree = "<group>"; };
 		83D34F200F92A08B000EAB0C /* ChooseNumPlayersController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChooseNumPlayersController.h; sourceTree = "<group>"; };
@@ -169,6 +174,8 @@
 		839CFC070F89D93A001505FD /* GuiControl */ = {
 			isa = PBXGroup;
 			children = (
+				83BA2E020F9CFB12005A76F1 /* GameStartupScreen.h */,
+				83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */,
 				83D34F200F92A08B000EAB0C /* ChooseNumPlayersController.h */,
 				83D34F1F0F92A08B000EAB0C /* ChooseNumPlayersController.m */,
 				83D351930F92C792000EAB0C /* PlayerNames.h */,
@@ -184,6 +191,7 @@
 				83D34F1D0F929E5E000EAB0C /* ChooseNumPlayers.xib */,
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
 				839768C90F9C35A6009F13C7 /* MonopolyGame.xib */,
+				83BA2E040F9CFB12005A76F1 /* GameStartupScreen.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -247,6 +255,7 @@
 				839B71E30F9BADF8007C2A7C /* Monopoly.xcclassmodel in Resources */,
 				839766E60F9C0123009F13C7 /* GetPlayerNames.xib in Resources */,
 				839768CB0F9C35A6009F13C7 /* MonopolyGame.xib in Resources */,
+				83BA2E060F9CFB12005A76F1 /* GameStartupScreen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +277,7 @@
 				83D34F210F92A08B000EAB0C /* ChooseNumPlayersController.m in Sources */,
 				83D351960F92C792000EAB0C /* PlayerNames.m in Sources */,
 				839768CA0F9C35A6009F13C7 /* MonopolyGame.m in Sources */,
+				83BA2E050F9CFB12005A76F1 /* GameStartupScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

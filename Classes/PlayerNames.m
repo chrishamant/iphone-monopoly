@@ -26,7 +26,6 @@
 		int ystart = 20+39+39+5;//px
 		for(int i=0;i<numPlayers;i++){
 			NSLog(@"Trying to create subview for player %d",i);
-			//PlayerNameController* temp = [[PlayerNameController alloc] initWithNibName:@"PlayerName" bundle:nil];
 			UITextField* temp = [[UITextField alloc] initWithFrame:CGRectMake(20, ystart, 278, 31)];
 			ystart = ystart + 39;//px
 			[playernames addObject:temp];

@@ -15,4 +15,6 @@
 @property (copy) NSString* title;
 @property (retain) GameBoardSpace* currentSpace;
 
+-(id)initWithTitle:(NSString*)name;
+
 @end

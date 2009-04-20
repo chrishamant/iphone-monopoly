@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "PlayerNameController.h"
 
-@interface PlayerNames : UIViewController {
+@interface PlayerNames : UIViewController<UITextFieldDelegate> {
 	int numPlayers;
 	NSMutableArray *playernames;
 //	UIScrollView *playerlist;

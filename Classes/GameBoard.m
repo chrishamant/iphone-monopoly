@@ -9,8 +9,9 @@
 
 
 @implementation GameBoard
+@synthesize spaces;
 
--(GameBoardSpace*) getNewSpace:(GameBoardSpace*)fromSpace :(int)numSpaces{
+-(GameBoardSpace*) getNewSpace:(GameBoardSpace*)fromSpace rolling:(int)numSpaces{
 	int currIndex = [spaces indexOfObject: fromSpace];
 	int newIndex = (currIndex + numSpaces) % 39;
 	return [spaces objectAtIndex:newIndex];
@@ -18,7 +19,7 @@
 
 -(id) init{
 	self = [super init];
-	spaces = [[NSMutableArray alloc] init];
+	spaces = [NSMutableArray arrayWithCapacity:40];
 	
 	//need to get better way of doing this... will need more info later
 	//core data?

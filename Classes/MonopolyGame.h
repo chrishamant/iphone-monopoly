@@ -14,7 +14,7 @@
 
 @property(retain,nonatomic) NSMutableArray* players;
 
-- (id)initWithNibNameAndPlayers:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil players:(NSMutableArray*) players;
+- (id)initWithNibNameAndPlayers:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil players:(NSMutableArray*)p;
 
 
 @end

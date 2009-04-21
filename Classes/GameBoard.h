@@ -12,6 +12,8 @@
 	NSMutableArray* spaces;
 }
 
--(GameBoardSpace*) getNewSpace:(GameBoardSpace*)fromSpace :(int)numSpaces;
+@property(nonatomic,retain) NSMutableArray* spaces;
+
+-(GameBoardSpace*)getNewSpace:(GameBoardSpace*)fromSpace rolling:(int)numSpaces;
 
 @end

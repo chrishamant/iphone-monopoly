@@ -5,7 +5,7 @@
 //  Created by Chris Hamant on 4/5/09.
 //
 
-#import "ChooseNumPlayersController.h"
+//#import "ChooseNumPlayersController.h"
 #import "GameStartupScreen.h"
 
 @interface MonopolyAppDelegate : NSObject <UIApplicationDelegate> {

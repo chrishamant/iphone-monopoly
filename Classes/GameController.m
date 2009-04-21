@@ -8,9 +8,12 @@
 #import "GameController.h"
 
 @implementation GameController
+//@synthesize state;
 
--(int)rollDice{
-	int roll = [Die roll] + [Die roll];
+-(Roll)rollDice{
+	Roll roll;
+	roll.r1 = [Die roll];
+	roll.r2 = [Die roll];
 	return roll;
 }
 
@@ -26,20 +29,13 @@
 
 -(void)startGame{
 	//start of 'main game loop'
-	NSArray* temp = [[NSArray alloc] initWithObjects:@"roll",@"do something else",nil];
-	while(1){
-		for(id player in players){
-			int choice = [delegateController choosePlayerTurnAction:temp roll:0 player:player];
-			NSLog(@"%d",choice);
-		}
+	NSArray* methods = [[NSArray alloc] initWithObjects:@"roll",@"do something else",nil];
+	for(id player in players){
+		[player setCurrentSpace:[[board spaces] objectAtIndex:0]];
 	}
+	//[delegateController setState:self availableActions:methods];
 }
 
-/*
- int roll = [self rollDice];
- GameBoardSpace* landed = [board getNewSpace:[token currentSpace] :roll];
- [token setCurrentSpace: landed];
- */
 
 -(void)dealloc{
 	[super dealloc];

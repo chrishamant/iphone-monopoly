@@ -5,21 +5,21 @@
 //  Created by Chris Hamant on 4/9/09.
 //
 
-#import <Foundation/Foundation.h>
-#import "GameBoardSpace.h"
-#import "Player.h"
-#import "GameBoard.h"
-#import "Die.h"
-#import "GameControllerDelegate.h"
-
 typedef struct{
 	int r1;
 	int r2;
 } Roll;
 
 typedef struct{
-	Player* currentPlayer;
+	id currentPlayer;
 } GameState;
+
+#import <Foundation/Foundation.h>
+#import "GameBoardSpace.h"
+#import "Player.h"
+#import "GameBoard.h"
+#import "Die.h"
+#import "GameControllerDelegate.h"
 
 @interface GameController : NSObject {
 	id<GameControllerDelegate> delegateController;

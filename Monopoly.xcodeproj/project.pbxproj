@@ -25,6 +25,7 @@
 		839B71E30F9BADF8007C2A7C /* Monopoly.xcclassmodel in Resources */ = {isa = PBXBuildFile; fileRef = 839B71E20F9BADF8007C2A7C /* Monopoly.xcclassmodel */; };
 		839CF9DA0F89B13B001505FD /* GameBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 839CF9D90F89B13B001505FD /* GameBoard.m */; };
 		839CF9E00F89B2B2001505FD /* GameBoardSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 839CF9DF0F89B2B2001505FD /* GameBoardSpace.m */; };
+		839DF34D0F9ECC5600B0235D /* MonopolySpaces.plist in Resources */ = {isa = PBXBuildFile; fileRef = 839DF34C0F9ECC5600B0235D /* MonopolySpaces.plist */; };
 		83BA2E050F9CFB12005A76F1 /* GameStartupScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */; };
 		83BA2E060F9CFB12005A76F1 /* GameStartupScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BA2E040F9CFB12005A76F1 /* GameStartupScreen.xib */; };
 		83D34F1E0F929E5E000EAB0C /* ChooseNumPlayers.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83D34F1D0F929E5E000EAB0C /* ChooseNumPlayers.xib */; };
@@ -62,6 +63,7 @@
 		839CF9D90F89B13B001505FD /* GameBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBoard.m; sourceTree = "<group>"; };
 		839CF9DE0F89B2B2001505FD /* GameBoardSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBoardSpace.h; sourceTree = "<group>"; };
 		839CF9DF0F89B2B2001505FD /* GameBoardSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBoardSpace.m; sourceTree = "<group>"; };
+		839DF34C0F9ECC5600B0235D /* MonopolySpaces.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MonopolySpaces.plist; sourceTree = "<group>"; };
 		83BA2E020F9CFB12005A76F1 /* GameStartupScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartupScreen.h; sourceTree = "<group>"; };
 		83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartupScreen.m; sourceTree = "<group>"; };
 		83BA2E040F9CFB12005A76F1 /* GameStartupScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameStartupScreen.xib; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				839B71E20F9BADF8007C2A7C /* Monopoly.xcclassmodel */,
 				28C3AD890F43EF2300507BA6 /* Monopoly.xcdatamodel */,
 				8D1107310486CEB800E47090 /* Monopoly-Info.plist */,
+				839DF34C0F9ECC5600B0235D /* MonopolySpaces.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				839766E60F9C0123009F13C7 /* GetPlayerNames.xib in Resources */,
 				839768CB0F9C35A6009F13C7 /* MonopolyGame.xib in Resources */,
 				83BA2E060F9CFB12005A76F1 /* GameStartupScreen.xib in Resources */,
+				839DF34D0F9ECC5600B0235D /* MonopolySpaces.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -33,7 +33,7 @@
 	for(id player in players){
 		[player setCurrentSpace:[[board spaces] objectAtIndex:0]];
 	}
-	//[delegateController setState:self availableActions:methods];
+	[delegateController setState:self availableActions:methods];
 }
 
 

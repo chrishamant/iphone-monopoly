@@ -46,11 +46,11 @@
 
 - (void)startMonopolyGame:(id)sender{
 	NSLog(@"Trying to start Monopoly Game");
-	MonopolyGame* game = [[MonopolyGame alloc] initWithNibNameAndPlayers:@"MonopolyGame" bundle:nil players:players];
+	MonopolyGame* game = [[MonopolyGame alloc] initWithPlayers:players];
 	[[game view] setFrame:[[self view] frame]];
-	[[[self view] window] addSubview:[game view]];
+	//[game viewControllers];	[[[self view] window] addSubview:[[game viewControllers] objectAtIndex:0]];
 	[game release];
-	[[self view] removeFromSuperview];
+	[[self view] removeFromSuperview];	
 }
 
 

@@ -10,19 +10,15 @@ typedef struct{
 	int r2;
 } Roll;
 
-typedef struct{
-	id currentPlayer;
-} GameState;
 
 #import <Foundation/Foundation.h>
 #import "GameBoardSpace.h"
-#import "Player.h"
 #import "GameBoard.h"
+#import "Player.h"
 #import "Die.h"
-#import "GameControllerDelegate.h"
+
 
 @interface GameController : NSObject {
-	id<GameControllerDelegate> delegateController;
 	NSArray* players;
 	GameBoard* board;
 }
@@ -30,7 +26,8 @@ typedef struct{
 //@property(nonatomic) GameState state;
 
 -(Roll)rollDice;
--(id)initWithPlayers:(NSArray*)players andUI:(id<GameControllerDelegate>) del;
+-(id)initWithPlayers:(NSArray*)players;
+-(IBAction) playerTakeTurn:(id)sender;
 -(void)startGame;
 
 @end

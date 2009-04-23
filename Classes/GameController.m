@@ -17,30 +17,31 @@
 	return roll;
 }
 
--(id)initWithPlayers:(NSArray*)theplayers andUI:(id<GameControllerDelegate>) theDelgateController {
+-(id)initWithPlayers:(NSArray*)theplayers {
 	if(self = [super init]){
 		players = theplayers;
 		[players retain];
-		delegateController =  theDelgateController;
-		[delegateController retain];
 	}
 	return self;
 }
 
 -(void)startGame{
 	//start of 'main game loop'
-	NSArray* methods = [[NSArray alloc] initWithObjects:@"roll",@"do something else",nil];
+	//NSArray* methods = [[NSArray alloc] initWithObjects:@"roll",@"do something else",nil];
 	for(id player in players){
 		[player setCurrentSpace:[[board spaces] objectAtIndex:0]];
 	}
-	[delegateController setState:self availableActions:methods];
+	//[delegateController setState:self availableActions:methods];
 }
 
 
 -(void)dealloc{
 	[super dealloc];
 	[players release];
-	[delegateController release];
+}
+
+-(void) playerTakeTurn:(id)sender{
+	
 }
 
 @end

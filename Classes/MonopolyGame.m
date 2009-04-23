@@ -10,7 +10,7 @@
 
 @implementation MonopolyGame
 @synthesize game;
-@synthesize gameScreen, boardScreen, statsScreen;
+//@synthesize gameScreen, boardScreen, statsScreen;
 
 #pragma mark UIViewController Overrides
 - (void)didReceiveMemoryWarning {
@@ -19,8 +19,8 @@
 	// Release any cached data, images, etc that aren't in use.
 }
 
--(void) loadView{
-	NSLog(@"got to load view %@", gameScreen);
+-(void)viewDidLoad{
+	NSLog(@"got to load from nib");
 	[self setSelectedIndex:0];
 }
 
@@ -36,10 +36,10 @@
 
 #pragma mark Implementation Methods
 -(id)initWithPlayers:(NSMutableArray*)p{
-	
     if (self = [super initWithNibName:@"Monopoly" bundle:nil]) {
 		//self.players = p;
-		NSLog(@"I GOT HERE");
+		game = [[GameController alloc] initWithPlayers:p];
+		NSLog(@"I GOT to init%@",game);
     }
     return self;
 }

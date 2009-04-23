@@ -8,17 +8,11 @@
 #import <UIKit/UIKit.h>
 #import "GameController.h"
 
-@interface MonopolyGame : UITabBarController {
+@interface MonopolyGame : UITabBarController<UITabBarControllerDelegate> {
 	GameController* game;
-	UITabBarItem* gameScreen;
-	UITabBarItem* boardScreen;
-	UITabBarItem* statsScreen;
 }
 
 @property(retain,nonatomic) IBOutlet GameController* game;
-@property(retain,nonatomic) IBOutlet UITabBarItem* gameScreen;
-@property(retain,nonatomic) IBOutlet UITabBarItem* boardScreen;
-@property(retain,nonatomic) IBOutlet UITabBarItem* statsScreen;
 
 - (id)initWithPlayers:(NSMutableArray*)players;
 

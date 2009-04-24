@@ -14,32 +14,25 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	//populate NSArray with defaults.
+	
+	//Sample Data
 	[players addObject:[[[Player alloc] initWithTitle:@"Player 1"] autorelease]];
 	[players addObject:[[[Player alloc] initWithTitle:@"Player 2"] autorelease]];
-}
-
-- (void)didReceiveMemoryWarning {
-	// Releases the view if it doesn't have a superview.
-    [super didReceiveMemoryWarning];
-	
-	// Release any cached data, images, etc that aren't in use.
-}
-
-- (void)viewDidUnload {
-	// Release any retained subviews of the main view.
-	// e.g. self.myOutlet = nil;
 }
 
 - (void)dealloc {
     [super dealloc];
 	[players release];
+	//am I retaining the delegate?
 }
 
 #pragma mark Implementation methods
 
 - (void)playerOptions:(id)sender{
 	NSLog(@"Options! Disabled for now..");
+	/*
+	 Launch modal View to let players choose#players and other player settings/attrs
+	 */
 }
 
 - (void)startMonopolyGame:(id)sender{

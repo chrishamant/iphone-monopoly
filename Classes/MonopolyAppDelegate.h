@@ -2,11 +2,13 @@
 //  MonopolyAppDelegate.h
 //  Monopoly
 //
-//  Created by Chris Hamant on 4/5/09.
 //
 
 @class GameStartupScreen;
 @class GameController;
+#import "BoardScreen.h"
+#import "GameScreen.h"
+#import "PlayersScreen.h"
 
 
 @interface MonopolyAppDelegate : NSObject <UIApplicationDelegate> {

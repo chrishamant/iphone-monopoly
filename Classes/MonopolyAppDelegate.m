@@ -2,7 +2,6 @@
 //  MonopolyAppDelegate.m
 //  Monopoly
 //
-//  Created by Chris Hamant on 4/5/09.
 //
 
 #import "MonopolyAppDelegate.h"
@@ -17,8 +16,15 @@
 -(void)startMonopoly:(GameController*)aGame{
 	[self setGame:aGame];
 	
-	//create View Controllers
-	//[[tab setViewControllers:[NSArray arrayWithObjects:[nil]]]];
+	
+	[tab setViewControllers:
+	 [NSArray arrayWithObjects:
+	  [[[GameScreen alloc] initWithNibName:@"GameScreen" bundle:nil] autorelease],
+	  [[[BoardScreen alloc] initWithNibName:@"BoardScreen" bundle:nil] autorelease],
+	  [[[PlayersScreen alloc] initWithNibName:@"PlayersScreen" bundle:nil] autorelease],
+	  nil]];
+	[tab setSelectedIndex:0];
+	
 	[window addSubview:tab.view];
 }
 

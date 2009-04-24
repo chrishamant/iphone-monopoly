@@ -76,19 +76,11 @@
 					<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 				</object>
 			</object>
-			<object class="IBUICustomObject" id="606223174"/>
+			<object class="IBProxyObject" id="1045528328"/>
 		</object>
 		<object class="IBObjectContainer" key="IBDocument.Objects">
 			<object class="NSMutableArray" key="connectionRecords">
 				<bool key="EncodedWithXMLCoder">YES</bool>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">game</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="606223174"/>
-					</object>
-					<int key="connectionID">82</int>
-				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">delegate</string>
@@ -100,18 +92,10 @@
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">game</string>
-						<reference key="source" ref="495147716"/>
-						<reference key="destination" ref="606223174"/>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="1045528328"/>
 					</object>
-					<int key="connectionID">98</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">view</string>
-						<reference key="source" ref="495147716"/>
-						<reference key="destination" ref="468973712"/>
-					</object>
-					<int key="connectionID">99</int>
+					<int key="connectionID">101</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -152,11 +136,6 @@
 						<int key="objectID">13</int>
 						<reference key="object" ref="468973712"/>
 						<reference key="parent" ref="495147716"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">25</int>
-						<reference key="object" ref="606223174"/>
-						<reference key="parent" ref="571122738"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">36</int>
@@ -200,6 +179,11 @@
 						<reference key="object" ref="1016371455"/>
 						<reference key="parent" ref="762109593"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">100</int>
+						<reference key="object" ref="1045528328"/>
+						<reference key="parent" ref="571122738"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -208,12 +192,11 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>-1.CustomClassName</string>
 					<string>-2.CustomClassName</string>
-					<string>12.CustomClassName</string>
+					<string>100.CustomClassName</string>
+					<string>100.IBPluginDependency</string>
 					<string>12.IBEditorWindowLastContentRect</string>
 					<string>12.IBPluginDependency</string>
 					<string>13.IBPluginDependency</string>
-					<string>25.CustomClassName</string>
-					<string>25.IBPluginDependency</string>
 					<string>35.IBPluginDependency</string>
 					<string>83.IBPluginDependency</string>
 				</object>
@@ -221,11 +204,10 @@
 					<bool key="EncodedWithXMLCoder">YES</bool>
 					<string>MonopolyGame</string>
 					<string>UIResponder</string>
-					<string>MonopolyGame</string>
+					<string>GameController</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>{{432, 376}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>GameController</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -251,7 +233,7 @@
 				</object>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">99</int>
+			<int key="maxID">101</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">

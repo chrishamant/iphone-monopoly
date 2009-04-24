@@ -48,12 +48,7 @@
 	NSLog(@"Trying to start Monopoly Game");
 	MonopolyGame* game = [[MonopolyGame alloc] initWithPlayers:players];
 	[[game view] setFrame:[[self view] frame]];
-	/*[game setViewControllers:[NSArray arrayWithObjects:[[[testing alloc] 
-														 initWithNibName:@"testing" bundle:nil] autorelease],
-							  [[[testing alloc] initWithNibName:@"testing" bundle:nil] autorelease],
-							  [[[testing alloc] initWithNibName:@"testing" bundle:nil] autorelease],nil]];
 	NSLog(@"start Monopoly %@",game);
-	*/
 	[[[self view] window] addSubview:[game view]];
 	[game setSelectedIndex:0];
 	[game release];

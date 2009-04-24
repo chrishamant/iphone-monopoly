@@ -2,15 +2,17 @@
 //  GameStartupScreen.h
 //  Monopoly
 //
-//  Created by Chris Hamant on 4/20/09.
 //
 
+#import "MonopolyAppDelegate.h"
 #import <UIKit/UIKit.h>
 #import "Player.h"
-#import "MonopolyGame.h"
+#import "GameController.h"
+
 
 @interface GameStartupScreen : UIViewController {
 	NSMutableArray* players;
+	IBOutlet MonopolyAppDelegate* theapp;
 }
 
 @property (nonatomic, retain) NSMutableArray* players;

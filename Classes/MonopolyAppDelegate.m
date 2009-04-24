@@ -10,7 +10,18 @@
 @implementation MonopolyAppDelegate
 
 @synthesize window;
-@synthesize mainviewcontroller;
+@synthesize game;
+
+#pragma mark Methods
+
+-(void)startMonopoly:(GameController*)aGame{
+	[self setGame:aGame];
+	
+	//create View Controllers
+	//[[tab setViewControllers:[NSArray arrayWithObjects:[nil]]]];
+	[window addSubview:tab.view];
+}
+
 
 #pragma mark -
 #pragma mark Application lifecycle
@@ -19,16 +30,14 @@
 	
     //initial view 
 	//ChooseNumPlayersController* choose = [[ChooseNumPlayersController alloc] initWithNibName:@"ChooseNumPlayers" bundle:nil];
-	
 	//mainviewcontroller = [[UINavigationController alloc] initWithRootViewController:choose];
-	
 	//release
 	//[choose release];
-	
 	//[window addSubview:[mainviewcontroller view]];
-	GameStartupScreen* startup = [[GameStartupScreen alloc] initWithNibName:@"GameStartupScreen" bundle:[NSBundle mainBundle]];
-	[[startup view] setFrame:CGRectMake(0,20, 320, 460)];
-	[window addSubview:[startup view]];
+	//GameStartupScreen* startup = [[GameStartupScreen alloc] initWithNibName:@"GameStartupScreen" bundle:[NSBundle mainBundle]];
+	//[[startup view] setFrame:CGRectMake(0,20, 320, 460)];
+	//[window addSubview:[startup view]];
+	
 	[window makeKeyAndVisible];
 }
 
@@ -37,14 +46,14 @@
  */
 - (void)applicationWillTerminate:(UIApplication *)application {
 	
-    NSError *error;
-    if (managedObjectContext != nil) {
+    //NSError *error;
+    /*if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
 			// Handle error
 			NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
 			exit(-1);  // Fail
         } 
-    }
+    }*/
 }
 
 
@@ -54,7 +63,7 @@
 /**
  Performs the save action for the application, which is to send the save:
  message to the application's managed object context.
- */
+
 - (IBAction)saveAction:(id)sender {
 	
     NSError *error;
@@ -72,7 +81,7 @@
 /**
  Returns the managed object context for the application.
  If the context doesn't already exist, it is created and bound to the persistent store coordinator for the application.
- */
+
 - (NSManagedObjectContext *) managedObjectContext {
 	
     if (managedObjectContext != nil) {
@@ -91,7 +100,7 @@
 /**
  Returns the managed object model for the application.
  If the model doesn't already exist, it is created by merging all of the models found in the application bundle.
- */
+
 - (NSManagedObjectModel *)managedObjectModel {
 	
     if (managedObjectModel != nil) {
@@ -105,7 +114,7 @@
 /**
  Returns the persistent store coordinator for the application.
  If the coordinator doesn't already exist, it is created and the application's store added to it.
- */
+
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
 	
     if (persistentStoreCoordinator != nil) {
@@ -129,23 +138,23 @@
 
 /**
  Returns the path to the application's documents directory.
- */
+
 - (NSString *)applicationDocumentsDirectory {
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
     return basePath;
 }
-
+*/
 
 #pragma mark -
 #pragma mark Memory management
 
 - (void)dealloc {
 	
-    [managedObjectContext release];
-    [managedObjectModel release];
-    [persistentStoreCoordinator release];
-    [mainviewcontroller release];
+    //[managedObjectContext release];
+    //[managedObjectModel release];
+    //[persistentStoreCoordinator release];
+    //[mainviewcontroller release];
 	[window release];
 	[super dealloc];
 }

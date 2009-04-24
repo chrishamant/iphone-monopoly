@@ -8,7 +8,7 @@
 #import <UIKit/UIKit.h>
 #import "GameController.h"
 
-@interface MonopolyGame : UITabBarController<UITabBarControllerDelegate> {
+@interface MonopolyGame : UIViewController {
 	GameController* game;
 }
 

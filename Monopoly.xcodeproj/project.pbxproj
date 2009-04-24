@@ -14,22 +14,18 @@
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
 		28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AD733E0D9D9553002E5188 /* MainWindow.xib */; };
 		28C3AD8A0F43EF2300507BA6 /* Monopoly.xcdatamodel in Sources */ = {isa = PBXBuildFile; fileRef = 28C3AD890F43EF2300507BA6 /* Monopoly.xcdatamodel */; };
-		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; };
+		28D801B40F44B63D00FB423F /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28D801B30F44B63D00FB423F /* CoreData.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		830E69580F927ED4005D1E44 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830E69540F927ED4005D1E44 /* GameController.m */; };
 		830E69590F927ED4005D1E44 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 830E69570F927ED4005D1E44 /* Player.m */; };
 		831A82160F8949C600ACCE76 /* Die.m in Sources */ = {isa = PBXBuildFile; fileRef = 831A82150F8949C600ACCE76 /* Die.m */; };
 		83830CC80F9EF5FE00C47AAC /* monopoly-man.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83830CC70F9EF5FE00C47AAC /* monopoly-man.jpg */; };
 		83830CCB0F9EF78E00C47AAC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83830CC90F9EF78E00C47AAC /* Icon.png */; };
 		83830CCC0F9EF78E00C47AAC /* Icon512.png in Resources */ = {isa = PBXBuildFile; fileRef = 83830CCA0F9EF78E00C47AAC /* Icon512.png */; };
-		839768CA0F9C35A6009F13C7 /* MonopolyGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 839768C80F9C35A6009F13C7 /* MonopolyGame.m */; };
-		839768CB0F9C35A6009F13C7 /* MonopolyGame.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839768C90F9C35A6009F13C7 /* MonopolyGame.xib */; };
 		839B71E30F9BADF8007C2A7C /* Monopoly.xcclassmodel in Resources */ = {isa = PBXBuildFile; fileRef = 839B71E20F9BADF8007C2A7C /* Monopoly.xcclassmodel */; };
 		839CF9DA0F89B13B001505FD /* GameBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 839CF9D90F89B13B001505FD /* GameBoard.m */; };
 		839CF9E00F89B2B2001505FD /* GameBoardSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 839CF9DF0F89B2B2001505FD /* GameBoardSpace.m */; };
 		839DF34D0F9ECC5600B0235D /* MonopolySpaces.plist in Resources */ = {isa = PBXBuildFile; fileRef = 839DF34C0F9ECC5600B0235D /* MonopolySpaces.plist */; };
 		83BA2E050F9CFB12005A76F1 /* GameStartupScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */; };
-		83BA2E060F9CFB12005A76F1 /* GameStartupScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83BA2E040F9CFB12005A76F1 /* GameStartupScreen.xib */; };
-		83D351960F92C792000EAB0C /* PlayerNames.m in Sources */ = {isa = PBXBuildFile; fileRef = 83D351940F92C792000EAB0C /* PlayerNames.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,9 +49,6 @@
 		83830CC70F9EF5FE00C47AAC /* monopoly-man.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "monopoly-man.jpg"; sourceTree = "<group>"; };
 		83830CC90F9EF78E00C47AAC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		83830CCA0F9EF78E00C47AAC /* Icon512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon512.png; sourceTree = "<group>"; };
-		839768C70F9C35A6009F13C7 /* MonopolyGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MonopolyGame.h; sourceTree = "<group>"; };
-		839768C80F9C35A6009F13C7 /* MonopolyGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MonopolyGame.m; sourceTree = "<group>"; };
-		839768C90F9C35A6009F13C7 /* MonopolyGame.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MonopolyGame.xib; sourceTree = "<group>"; };
 		839B71E20F9BADF8007C2A7C /* Monopoly.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = Monopoly.xcclassmodel; sourceTree = "<group>"; };
 		839CF9D80F89B13B001505FD /* GameBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBoard.h; sourceTree = "<group>"; };
 		839CF9D90F89B13B001505FD /* GameBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBoard.m; sourceTree = "<group>"; };
@@ -64,9 +57,6 @@
 		839DF34C0F9ECC5600B0235D /* MonopolySpaces.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MonopolySpaces.plist; sourceTree = "<group>"; };
 		83BA2E020F9CFB12005A76F1 /* GameStartupScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartupScreen.h; sourceTree = "<group>"; };
 		83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartupScreen.m; sourceTree = "<group>"; };
-		83BA2E040F9CFB12005A76F1 /* GameStartupScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameStartupScreen.xib; sourceTree = "<group>"; };
-		83D351930F92C792000EAB0C /* PlayerNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerNames.h; sourceTree = "<group>"; };
-		83D351940F92C792000EAB0C /* PlayerNames.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerNames.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Monopoly-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Monopoly-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -172,8 +162,6 @@
 			children = (
 				83BA2E020F9CFB12005A76F1 /* GameStartupScreen.h */,
 				83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */,
-				83D351930F92C792000EAB0C /* PlayerNames.h */,
-				83D351940F92C792000EAB0C /* PlayerNames.m */,
 			);
 			name = GuiControl;
 			sourceTree = "<group>";
@@ -182,8 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				28AD733E0D9D9553002E5188 /* MainWindow.xib */,
-				839768C90F9C35A6009F13C7 /* MonopolyGame.xib */,
-				83BA2E040F9CFB12005A76F1 /* GameStartupScreen.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -191,8 +177,6 @@
 		83D351920F92C723000EAB0C /* ModelControl */ = {
 			isa = PBXGroup;
 			children = (
-				839768C70F9C35A6009F13C7 /* MonopolyGame.h */,
-				839768C80F9C35A6009F13C7 /* MonopolyGame.m */,
 				830E69530F927ED4005D1E44 /* GameController.h */,
 				830E69540F927ED4005D1E44 /* GameController.m */,
 			);
@@ -243,8 +227,6 @@
 			files = (
 				28AD733F0D9D9553002E5188 /* MainWindow.xib in Resources */,
 				839B71E30F9BADF8007C2A7C /* Monopoly.xcclassmodel in Resources */,
-				839768CB0F9C35A6009F13C7 /* MonopolyGame.xib in Resources */,
-				83BA2E060F9CFB12005A76F1 /* GameStartupScreen.xib in Resources */,
 				839DF34D0F9ECC5600B0235D /* MonopolySpaces.plist in Resources */,
 				83830CC80F9EF5FE00C47AAC /* monopoly-man.jpg in Resources */,
 				83830CCB0F9EF78E00C47AAC /* Icon.png in Resources */,
@@ -267,8 +249,6 @@
 				839CF9E00F89B2B2001505FD /* GameBoardSpace.m in Sources */,
 				830E69580F927ED4005D1E44 /* GameController.m in Sources */,
 				830E69590F927ED4005D1E44 /* Player.m in Sources */,
-				83D351960F92C792000EAB0C /* PlayerNames.m in Sources */,
-				839768CA0F9C35A6009F13C7 /* MonopolyGame.m in Sources */,
 				83BA2E050F9CFB12005A76F1 /* GameStartupScreen.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

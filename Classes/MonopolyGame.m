@@ -19,10 +19,6 @@
 	// Release any cached data, images, etc that aren't in use.
 }
 
--(void)viewDidLoad{
-	NSLog(@"got to load from nib");
-	[self setSelectedIndex:0];
-}
 
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.

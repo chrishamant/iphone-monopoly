@@ -2,11 +2,9 @@
 //  GameStartupScreen.m
 //  Monopoly
 //
-//  Created by Chris Hamant on 4/20/09.
 //
 
 #import "GameStartupScreen.h"
-
 
 @implementation GameStartupScreen
 @synthesize players;
@@ -46,12 +44,17 @@
 
 - (void)startMonopolyGame:(id)sender{
 	NSLog(@"Trying to start Monopoly Game");
-	MonopolyGame* game = [[MonopolyGame alloc] initWithPlayers:players];
-	[[game view] setFrame:[[self view] frame]];
-	NSLog(@"start Monopoly %@",game);
-	[[[self view] window] addSubview:[game view]];
-	[game setSelectedIndex:0];
-	[game release];
+
+	GameController* game = [[GameController alloc] initWithPlayers:players];
+	[theapp startMonopoly:game];
+	
+	//[[game view] setFrame:[[self view] frame]];
+	//NSLog(@"start Monopoly %@",game);
+	//[[[self view] window] addSubview:[game view]];
+	//[game setSelectedIndex:0];
+	//[game release];
+	
+	
 	[[self view] removeFromSuperview];	
 }
 

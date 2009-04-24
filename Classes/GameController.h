@@ -2,7 +2,6 @@
 //  GameController.h
 //  Monopoly
 //
-//  Created by Chris Hamant on 4/9/09.
 //
 
 typedef struct{
@@ -22,8 +21,6 @@ typedef struct{
 	NSArray* players;
 	GameBoard* board;
 }
-
-//@property(nonatomic) GameState state;
 
 -(Roll)rollDice;
 -(id)initWithPlayers:(NSArray*)players;

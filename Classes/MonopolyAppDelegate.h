@@ -5,27 +5,33 @@
 //  Created by Chris Hamant on 4/5/09.
 //
 
-//#import "ChooseNumPlayersController.h"
-#import "GameStartupScreen.h"
+@class GameStartupScreen;
+@class GameController;
+
 
 @interface MonopolyAppDelegate : NSObject <UIApplicationDelegate> {
-    NSManagedObjectModel *managedObjectModel;
+    /*NSManagedObjectModel *managedObjectModel;
     NSManagedObjectContext *managedObjectContext;	    
-    NSPersistentStoreCoordinator *persistentStoreCoordinator;
-	UINavigationController *mainviewcontroller;
-    UIWindow *window;
+    NSPersistentStoreCoordinator *persistentStoreCoordinator;*/
+
+	IBOutlet UITabBarController *tab;
+    IBOutlet UIWindow *window;
+	GameController* game;
 }
 
 #pragma mark methods
-- (IBAction)saveAction:sender;
+//- (IBAction)saveAction:sender;
+-(void)startMonopoly:(GameController*)game;
 
 #pragma mark property declarations
-@property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
+/*@property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
-@property (nonatomic, readonly) NSString *applicationDocumentsDirectory;
-@property (nonatomic, retain) IBOutlet UIWindow *window;
-@property (nonatomic, retain) IBOutlet UINavigationController *mainviewcontroller;
+@property (nonatomic, readonly) NSString *applicationDocumentsDirectory;*/
+@property (nonatomic, retain) GameController* game;
+
+@property (nonatomic, retain) UIWindow *window;
+//@property (nonatomic, retain) IBOutlet UINavigationController *mainviewcontroller;
 
 @end
 

@@ -2,7 +2,6 @@
 //  GameController.m
 //  Monopoly
 //
-//  Created by Chris Hamant on 4/9/09.
 //
 
 #import "GameController.h"

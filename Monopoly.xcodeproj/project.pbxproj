@@ -18,6 +18,7 @@
 		830E69580F927ED4005D1E44 /* GameController.m in Sources */ = {isa = PBXBuildFile; fileRef = 830E69540F927ED4005D1E44 /* GameController.m */; };
 		830E69590F927ED4005D1E44 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 830E69570F927ED4005D1E44 /* Player.m */; };
 		831A82160F8949C600ACCE76 /* Die.m in Sources */ = {isa = PBXBuildFile; fileRef = 831A82150F8949C600ACCE76 /* Die.m */; };
+		837B68400FA2E20B00C72CF5 /* Monopoly Board.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 837B683F0FA2E20B00C72CF5 /* Monopoly Board.jpg */; };
 		83830CC80F9EF5FE00C47AAC /* monopoly-man.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83830CC70F9EF5FE00C47AAC /* monopoly-man.jpg */; };
 		83830CCB0F9EF78E00C47AAC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83830CC90F9EF78E00C47AAC /* Icon.png */; };
 		83830CCC0F9EF78E00C47AAC /* Icon512.png in Resources */ = {isa = PBXBuildFile; fileRef = 83830CCA0F9EF78E00C47AAC /* Icon512.png */; };
@@ -31,7 +32,6 @@
 		839EB7F50FA18335005CB448 /* BoardScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EB7F30FA18335005CB448 /* BoardScreen.xib */; };
 		839EB7FC0FA18442005CB448 /* PlayersScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 839EB7FA0FA18442005CB448 /* PlayersScreen.m */; };
 		839EB7FD0FA18442005CB448 /* PlayersScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EB7FB0FA18442005CB448 /* PlayersScreen.xib */; };
-		839EB88E0FA18ADF005CB448 /* GameView.m in Sources */ = {isa = PBXBuildFile; fileRef = 839EB88D0FA18ADF005CB448 /* GameView.m */; };
 		839EB9190FA19404005CB448 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 839EB9180FA19404005CB448 /* Default.png */; };
 		83BA2E050F9CFB12005A76F1 /* GameStartupScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */; };
 /* End PBXBuildFile section */
@@ -54,6 +54,7 @@
 		830E69570F927ED4005D1E44 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		831A82140F8949C600ACCE76 /* Die.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Die.h; sourceTree = "<group>"; };
 		831A82150F8949C600ACCE76 /* Die.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Die.m; sourceTree = "<group>"; };
+		837B683F0FA2E20B00C72CF5 /* Monopoly Board.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Monopoly Board.jpg"; sourceTree = "<group>"; };
 		83830CC70F9EF5FE00C47AAC /* monopoly-man.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "monopoly-man.jpg"; sourceTree = "<group>"; };
 		83830CC90F9EF78E00C47AAC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		83830CCA0F9EF78E00C47AAC /* Icon512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon512.png; sourceTree = "<group>"; };
@@ -72,8 +73,6 @@
 		839EB7F90FA18442005CB448 /* PlayersScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersScreen.h; sourceTree = "<group>"; };
 		839EB7FA0FA18442005CB448 /* PlayersScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersScreen.m; sourceTree = "<group>"; };
 		839EB7FB0FA18442005CB448 /* PlayersScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayersScreen.xib; sourceTree = "<group>"; };
-		839EB88C0FA18ADF005CB448 /* GameView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameView.h; sourceTree = "<group>"; };
-		839EB88D0FA18ADF005CB448 /* GameView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameView.m; sourceTree = "<group>"; };
 		839EB9180FA19404005CB448 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		83BA2E020F9CFB12005A76F1 /* GameStartupScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartupScreen.h; sourceTree = "<group>"; };
 		83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartupScreen.m; sourceTree = "<group>"; };
@@ -140,6 +139,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				837B683F0FA2E20B00C72CF5 /* Monopoly Board.jpg */,
 				83830CC90F9EF78E00C47AAC /* Icon.png */,
 				83830CCA0F9EF78E00C47AAC /* Icon512.png */,
 				83830CC70F9EF5FE00C47AAC /* monopoly-man.jpg */,
@@ -200,8 +200,6 @@
 				839EB7EE0FA18322005CB448 /* GameScreen.xib */,
 				839EB7F30FA18335005CB448 /* BoardScreen.xib */,
 				839EB7FB0FA18442005CB448 /* PlayersScreen.xib */,
-				839EB88C0FA18ADF005CB448 /* GameView.h */,
-				839EB88D0FA18ADF005CB448 /* GameView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -267,6 +265,7 @@
 				839EB7F50FA18335005CB448 /* BoardScreen.xib in Resources */,
 				839EB7FD0FA18442005CB448 /* PlayersScreen.xib in Resources */,
 				839EB9190FA19404005CB448 /* Default.png in Resources */,
+				837B68400FA2E20B00C72CF5 /* Monopoly Board.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +288,6 @@
 				839EB7EF0FA18322005CB448 /* GameScreen.m in Sources */,
 				839EB7F40FA18335005CB448 /* BoardScreen.m in Sources */,
 				839EB7FC0FA18442005CB448 /* PlayersScreen.m in Sources */,
-				839EB88E0FA18ADF005CB448 /* GameView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -50,5 +50,30 @@
     [super dealloc];
 }
 
+#pragma mark Events and stuff
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+	NSLog(@"begin!");
+}
+
+- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
+	NSLog(@"middle!");
+}
+
+- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
+	NSLog(@"end!");
+}
+
+- (void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+	NSLog(@"begin!");
+}
+
+- (void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+	NSLog(@"end!");
+}
+
+- (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event{
+	NSLog(@"cancelled!!");
+}
 
 @end

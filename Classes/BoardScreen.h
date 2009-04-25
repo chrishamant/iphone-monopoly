@@ -9,7 +9,7 @@
 
 
 @interface BoardScreen : UIViewController {
-
+	IBOutlet UIImageView* board;
 }
 
 @end

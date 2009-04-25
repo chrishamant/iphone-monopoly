@@ -7,8 +7,9 @@
 #import <UIKit/UIKit.h>
 
 
-@interface PlayersScreen : UIViewController {
-
+@interface PlayersScreen : UIViewController<UITableViewDelegate> {
+	IBOutlet UINavigationController* nav;
+	IBOutlet UITableViewController* tableview;
 }
 
 @end

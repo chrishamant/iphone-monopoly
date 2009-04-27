@@ -61,14 +61,17 @@
 
 <UML:DataType xmi.id="DCE.446E242A-4233-9275-7448-9D9A64CB325A" name="UIWindow" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"/>
 <UML:DataType xmi.id="DCE.73F494CC-4EAF-DA75-57FB-569BB81311FF" name="UITabBarController" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"/>
-<UML:Class xmi.id="DCE.A346764E-25E0-7EC4-6047-1328AB5A5DF8" name="GameBoardSpace" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"><UML:Element.presentation>
+<UML:Class xmi.id="DCE.A346764E-25E0-7EC4-6047-1328AB5A5DF8" name="GameBoardSpace" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538" specialization="DCE.C285B485-80BE-0812-0B67-6ED23F5582A5 DCE.6211440A-FFD3-2D30-CCBB-0B58504F342B"><UML:Element.presentation>
+
 
 </UML:Element.presentation><UML:Element.ownedElement>
 <UML:Attribute xmi.id="DCE.1ECE7CA3-FCA8-0F8E-A9A2-BDEEAB6D4B9E" visibility="private" name="title" type="DCE.7DCF5A31-DBCA-DF1D-5D69-B862730F638B" owner="DCE.A346764E-25E0-7EC4-6047-1328AB5A5DF8"><UML:Element.presentation>
 
+
 </UML:Element.presentation><UML:TypedElement.multiplicity>
 <UML:Multiplicity xmi.id="DCE.3A099B09-07EB-7A45-6B7B-B85A8278A8B9"/></UML:TypedElement.multiplicity><UML:Attribute.default>
-<UML:Expression xmi.id="DCE.0930FFCB-B9F9-510D-EA6F-49D265A74479"/></UML:Attribute.default></UML:Attribute></UML:Element.ownedElement><UML:Classifier.generalization>
+<UML:Expression xmi.id="DCE.0930FFCB-B9F9-510D-EA6F-49D265A74479"/></UML:Attribute.default></UML:Attribute>
+</UML:Element.ownedElement><UML:Classifier.generalization>
 <UML:Generalization xmi.id="DCE.62A364ED-6F8B-1F00-84A7-C0069E84D809" specific="DCE.A346764E-25E0-7EC4-6047-1328AB5A5DF8" general="DCE.E42BE45A-E9D7-C0FD-7902-9B8F5AC28629"><UML:Element.presentation>
 </UML:Element.presentation></UML:Generalization></UML:Classifier.generalization></UML:Class>
 <UML:DataType xmi.id="DCE.7DCF5A31-DBCA-DF1D-5D69-B862730F638B" name="NSString" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"/>
@@ -440,7 +443,26 @@
 </UML:Element.presentation></UML:Message></UML:Interaction.message></UML:Interaction>
 <UML:Actor xmi.id="DCE.8115A309-64A0-A90D-1A67-E099FC6CB053" name="User" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538" end="DCE.A7E9969E-85F5-9D0C-3A83-FEB82F643919"/>
 <UML:DataType xmi.id="DCE.F3818092-7518-F827-57DA-7A1E8478F806" name="MainWindowNib" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"><UML:Element.ownedElement>
-<UML:Part xmi.id="DCE.C31908BE-8635-60B2-1954-31F8BD2D7A02" visibility="private" name="Unnamed" type="DCE.F3818092-7518-F827-57DA-7A1E8478F806" owner="DCE.F3818092-7518-F827-57DA-7A1E8478F806" end="DCE.CBC0BFE9-AEE0-2CE2-9916-41A381ADB0BF DCE.85A12BCD-9FAF-BF2B-22B5-2E6E5461A658 DCE.FFF6A9B9-235C-01CF-1623-4A19AC2B90F2"/></UML:Element.ownedElement></UML:DataType></UML:Element.ownedElement><UML:Package.packageImport>
+<UML:Part xmi.id="DCE.C31908BE-8635-60B2-1954-31F8BD2D7A02" visibility="private" name="Unnamed" type="DCE.F3818092-7518-F827-57DA-7A1E8478F806" owner="DCE.F3818092-7518-F827-57DA-7A1E8478F806" end="DCE.CBC0BFE9-AEE0-2CE2-9916-41A381ADB0BF DCE.85A12BCD-9FAF-BF2B-22B5-2E6E5461A658 DCE.FFF6A9B9-235C-01CF-1623-4A19AC2B90F2"/></UML:Element.ownedElement></UML:DataType>
+
+
+
+<UML:Enumeration xmi.id="DCE.865EEB10-07FF-4F2A-D5E9-1D52C3A4F444" name="PropertySpaceTypes" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"><UML:Element.presentation>
+</UML:Element.presentation><UML:Enumeration.literal>
+<UML:EnumerationLiteral xmi.id="DCE.2AA162E5-AB62-5314-C6A6-54B026271D8A" enumeration="DCE.865EEB10-07FF-4F2A-D5E9-1D52C3A4F444" name="Utility"><UML:Element.presentation>
+</UML:Element.presentation></UML:EnumerationLiteral>
+<UML:EnumerationLiteral xmi.id="DCE.F949204A-A98C-5C7E-61F8-30188F7ACBD8" enumeration="DCE.865EEB10-07FF-4F2A-D5E9-1D52C3A4F444" name="Railroad"><UML:Element.presentation>
+</UML:Element.presentation></UML:EnumerationLiteral>
+<UML:EnumerationLiteral xmi.id="DCE.12161D0C-D427-8ED0-4FEF-75CC3A34B907" enumeration="DCE.865EEB10-07FF-4F2A-D5E9-1D52C3A4F444" name="Improvable"><UML:Element.presentation>
+</UML:Element.presentation></UML:EnumerationLiteral></UML:Enumeration.literal></UML:Enumeration>
+<UML:Class xmi.id="DCE.07A23D5C-420E-DD31-B1C9-080B2D9F417F" name="PropertyBoardSpace" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"><UML:Element.presentation>
+</UML:Element.presentation><UML:Classifier.generalization>
+<UML:Generalization xmi.id="DCE.6211440A-FFD3-2D30-CCBB-0B58504F342B" specific="DCE.07A23D5C-420E-DD31-B1C9-080B2D9F417F" general="DCE.A346764E-25E0-7EC4-6047-1328AB5A5DF8"><UML:Element.presentation>
+</UML:Element.presentation></UML:Generalization></UML:Classifier.generalization><UML:Element.ownedElement>
+<UML:Operation xmi.id="DCE.2E0B68D3-B682-8768-BBC7-2C54A7F30269" name="getRent" owner="DCE.07A23D5C-420E-DD31-B1C9-080B2D9F417F"><UML:Element.ownedElement>
+<UML:Parameter xmi.id="DCE.D62B126B-2662-D19E-B906-A36AD42C1CAD" type="DCE.42B9A9C6-9FE6-05D4-E993-26F4C2C6A79F" direction="result" owner="DCE.2E0B68D3-B682-8768-BBC7-2C54A7F30269"><UML:TypedElement.multiplicity>
+<UML:Multiplicity xmi.id="DCE.C8CC3AA6-E7B3-335E-DD61-022B991B48B2"/></UML:TypedElement.multiplicity></UML:Parameter></UML:Element.ownedElement><UML:Element.presentation>
+</UML:Element.presentation></UML:Operation></UML:Element.ownedElement></UML:Class></UML:Element.ownedElement><UML:Package.packageImport>
 <UML:PackageImport xmi.id="DCE.51821D4B-730C-7C10-C8AA-1C892C1FC246" importingPackage="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"><UML:PackageImport.importedPackage>
 <UML:Profile xmi.id="DCE.8FD29DC2-AFE9-90B8-A018-98FB2C6353FD" name="Unnamed" isCloned="true" href="./iphone-monopoly.etup#//*[@xmi.id=&apos;DCE.8FD29DC2-AFE9-90B8-A018-98FB2C6353FD&apos;]" isDirty="false"/></UML:PackageImport.importedPackage><UML:Element.ownedElement>
 <UML:TaggedValue xmi.id="DCE.411D7664-CA4E-2FD2-3FEE-CA773EB8330D" owner="DCE.51821D4B-730C-7C10-C8AA-1C892C1FC246" name="autoCreated">

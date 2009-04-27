@@ -11,6 +11,7 @@
 
 @synthesize title;
 @synthesize currentSpace;
+@synthesize token;
 
 -(id)initWithTitle:(NSString*)name{
 	if(self = [super init]){

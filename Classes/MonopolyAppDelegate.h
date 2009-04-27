@@ -23,6 +23,7 @@
 
 #pragma mark methods
 //- (IBAction)saveAction:sender;
+
 -(void)startMonopoly:(GameController*)game;
 
 #pragma mark property declarations
@@ -30,10 +31,10 @@
 @property (nonatomic, retain, readonly) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, readonly) NSString *applicationDocumentsDirectory;*/
-@property (nonatomic, retain) GameController* game;
 
+@property (nonatomic, retain) GameController* game;
 @property (nonatomic, retain) UIWindow *window;
-//@property (nonatomic, retain) IBOutlet UINavigationController *mainviewcontroller;
+
 
 @end
 

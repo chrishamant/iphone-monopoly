@@ -4,4 +4,5 @@
 build/*
 *.model1v3
 .svn
+*.mode1v3
 

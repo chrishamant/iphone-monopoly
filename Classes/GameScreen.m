@@ -5,23 +5,26 @@
 //
 
 #import "GameScreen.h"
-
+@class Player;
 
 @implementation GameScreen
 
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+@synthesize game;
+
+-(id)initWithGame:(GameController*)g{
+	if (self = [super initWithNibName:@"GameScreen" bundle:nil]) {
         [self setTitle:@"Game"];
+		[g retain];
+		game = g;
     }
     return self;
 }
 
 
-
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
+	[self updateDisplay];
 }
 
 
@@ -48,6 +51,7 @@
 
 - (void)dealloc {
     [super dealloc];
+	[game release];
 }
 
 #pragma mark Events and stuff
@@ -74,6 +78,21 @@
 
 - (void)motionCancelled:(UIEventSubtype)motion withEvent:(UIEvent *)event{
 	NSLog(@"cancelled!!");
+}
+
+#pragma mark Implementation methods
+
+-(void)rollAction:(id)sender{
+	[actionResult setText:@"Yhey! You Tried to roll!"];
+	[game playerTakeTurn];
+	[self updateDisplay];
+}
+
+-(void)updateDisplay{
+	Player* p = [game currentPlayer];
+	[playerName setText:[p title]];
+	[currentSpace setText:[[p currentSpace] title]];
+	[self.view setNeedsDisplay];
 }
 
 @end

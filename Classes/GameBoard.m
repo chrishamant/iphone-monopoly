@@ -11,17 +11,17 @@
 @synthesize spaces;
 
 -(GameBoardSpace*) getNewSpace:(GameBoardSpace*)fromSpace rolling:(int)numSpaces{
-	int currIndex = [spaces indexOfObject: fromSpace];
-	int newIndex = (currIndex + numSpaces) % 39;
+	NSUInteger currIndex = [spaces indexOfObject: fromSpace];
+	NSUInteger newIndex = (currIndex + numSpaces) % 39;
 	return [spaces objectAtIndex:newIndex];
 }
 
 -(id) init{
 	self = [super init];
-	spaces = [NSMutableArray arrayWithCapacity:40];
 	
+	[self setSpaces:[NSMutableArray arrayWithCapacity:40]];
 	//need to get better way of doing this... will need more info later
-	//core data?
+	//read from plist
 	for(int i=0;i<40;i++){
 		[spaces insertObject:[[GameBoardSpace alloc] init] atIndex:i];
 	}

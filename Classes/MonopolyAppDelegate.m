@@ -9,17 +9,15 @@
 @implementation MonopolyAppDelegate
 
 @synthesize window;
-@synthesize game;
 
 #pragma mark Methods
 
 -(void)startMonopoly:(GameController*)aGame{
-	[self setGame:aGame];
 	
 	
 	[tab setViewControllers:
 	 [NSArray arrayWithObjects:
-	  [[[GameScreen alloc] initWithNibName:@"GameScreen" bundle:nil] autorelease],
+	  [[[GameScreen alloc] initWithGame:aGame] autorelease],
 	  [[[BoardScreen alloc] initWithNibName:@"BoardScreen" bundle:nil] autorelease],
 	  [[[PlayersScreen alloc] initWithNibName:@"PlayersScreen" bundle:nil] autorelease],
 	  nil]];
@@ -32,18 +30,9 @@
 #pragma mark -
 #pragma mark Application lifecycle
 
-- (void)applicationDidFinishLaunching:(UIApplication *)application {    
-	
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
     //initial view 
-	//ChooseNumPlayersController* choose = [[ChooseNumPlayersController alloc] initWithNibName:@"ChooseNumPlayers" bundle:nil];
-	//mainviewcontroller = [[UINavigationController alloc] initWithRootViewController:choose];
-	//release
-	//[choose release];
-	//[window addSubview:[mainviewcontroller view]];
-	//GameStartupScreen* startup = [[GameStartupScreen alloc] initWithNibName:@"GameStartupScreen" bundle:[NSBundle mainBundle]];
 	//[[startup view] setFrame:CGRectMake(0,20, 320, 460)];
-	//[window addSubview:[startup view]];
-	
 	[window makeKeyAndVisible];
 }
 

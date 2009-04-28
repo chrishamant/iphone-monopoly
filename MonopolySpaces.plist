@@ -9,6 +9,8 @@
 		<string>Go</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>color</key>
 		<string>purpleColor</string>
 		<key>related</key>
@@ -40,6 +42,8 @@
 		<string>Community Chest</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<integer>1</integer>
@@ -71,6 +75,8 @@
 		<integer>0</integer>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Railroad</string>
 		<key>related</key>
 		<array>
 			<string>35</string>
@@ -92,6 +98,8 @@
 		<string>Reading Railroad</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>8</string>
@@ -124,6 +132,8 @@
 		<string>Chance</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>6</string>
@@ -150,6 +160,8 @@
 		<string>Vermont Avenue</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>6</string>
@@ -182,6 +194,8 @@
 		<string>In Jail/Just Visiting</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>13</string>
@@ -208,6 +222,8 @@
 		<string>St. Charles Place</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Utility</string>
 		<key>isProperty</key>
 		<true/>
 		<key>cost</key>
@@ -216,6 +232,8 @@
 		<string>Electric Company</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>11</string>
@@ -242,6 +260,8 @@
 		<string>States Avenue</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>13</string>
@@ -268,6 +288,8 @@
 		<string>Virginia Avenue</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Railroad</string>
 		<key>related</key>
 		<array>
 			<string>5</string>
@@ -289,6 +311,8 @@
 		<string>Pennsylvania Railroad</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>18</string>
@@ -321,6 +345,8 @@
 		<string>Community Chest</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>16</string>
@@ -347,6 +373,8 @@
 		<string>Tennessee Avenue</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>16</string>
@@ -379,6 +407,8 @@
 		<string>Free Parking</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>23</string>
@@ -411,6 +441,8 @@
 		<string>Chance</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>21</string>
@@ -437,6 +469,8 @@
 		<string>Indiana Avenue</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>21</string>
@@ -463,6 +497,8 @@
 		<string>Illinois Avenue</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Railroad</string>
 		<key>related</key>
 		<array>
 			<string>5</string>
@@ -484,6 +520,8 @@
 		<string>B&amp;O Railroad</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>27</string>
@@ -510,6 +548,8 @@
 		<string>Atlantic Avenue</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>26</string>
@@ -536,6 +576,8 @@
 		<string>Ventnor Avenue</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Utility</string>
 		<key>isProperty</key>
 		<true/>
 		<key>cost</key>
@@ -544,6 +586,8 @@
 		<string>Water Works</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>26</string>
@@ -576,6 +620,8 @@
 		<string>Go to Jail</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>32</string>
@@ -602,6 +648,8 @@
 		<string>Pacific Avenue</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>31</string>
@@ -634,6 +682,8 @@
 		<string>Community Chest</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>31</string>
@@ -660,6 +710,8 @@
 		<string>Pennsylvania Avenue</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Railroad</string>
 		<key>related</key>
 		<array>
 			<string>5</string>
@@ -687,6 +739,8 @@
 		<string>Chance</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>39</string>
@@ -718,6 +772,8 @@
 		<string>Luxury Tax</string>
 	</dict>
 	<dict>
+		<key>propertyType</key>
+		<string>Improvable</string>
 		<key>related</key>
 		<array>
 			<string>37</string>

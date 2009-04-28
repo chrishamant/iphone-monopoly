@@ -18,7 +18,6 @@
 
 	IBOutlet UITabBarController *tab;
     IBOutlet UIWindow *window;
-	GameController* game;
 }
 
 #pragma mark methods
@@ -32,7 +31,6 @@
 @property (nonatomic, retain, readonly) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, readonly) NSString *applicationDocumentsDirectory;*/
 
-@property (nonatomic, retain) GameController* game;
 @property (nonatomic, retain) UIWindow *window;
 
 

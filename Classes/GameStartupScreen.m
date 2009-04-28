@@ -14,7 +14,7 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
+	[self setPlayers:[NSMutableArray arrayWithCapacity:8]];
 	//Sample Data
 	[players addObject:[[[Player alloc] initWithTitle:@"Player 1"] autorelease]];
 	[players addObject:[[[Player alloc] initWithTitle:@"Player 2"] autorelease]];
@@ -40,13 +40,6 @@
 
 	GameController* game = [[GameController alloc] initWithPlayers:players];
 	[theapp startMonopoly:game];
-	
-	//[[game view] setFrame:[[self view] frame]];
-	//NSLog(@"start Monopoly %@",game);
-	//[[[self view] window] addSubview:[game view]];
-	//[game setSelectedIndex:0];
-	//[game release];
-	
 	
 	[[self view] removeFromSuperview];	
 }

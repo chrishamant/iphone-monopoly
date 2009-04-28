@@ -7,7 +7,9 @@
 #import "GameController.h"
 
 @implementation GameController
-//@synthesize state;
+
+@synthesize board;
+@synthesize currentPlayer;
 
 -(Roll)rollDice{
 	Roll roll;
@@ -20,27 +22,43 @@
 	if(self = [super init]){
 		players = theplayers;
 		[players retain];
+		
+		//initialize board
+		board = [[GameBoard alloc] init];
+		
+		//everyplayer should start at Go (index0)
+		for(id player in players){
+			[player setCurrentSpace:[[board spaces] objectAtIndex:0]];
+		}
+		currentPlayer = [players objectAtIndex:0];
 	}
 	return self;
-}
-
--(void)startGame{
-	//start of 'main game loop'
-	//NSArray* methods = [[NSArray alloc] initWithObjects:@"roll",@"do something else",nil];
-	for(id player in players){
-		[player setCurrentSpace:[[board spaces] objectAtIndex:0]];
-	}
-	//[delegateController setState:self availableActions:methods];
 }
 
 
 -(void)dealloc{
 	[super dealloc];
 	[players release];
+	[currentPlayer release];
 }
 
--(void) playerTakeTurn:(id)sender{
+-(void) playerTakeTurn{
+	Roll r = [self rollDice];
+	currentPlayer.currentSpace = [board getNewSpace:currentPlayer.currentSpace rolling:(r.r1+r.r2)];
 	
+	if(r.r1 != r.r2){
+		//did not roll doubles
+		NSUInteger pindex = [players indexOfObject:currentPlayer];
+		pindex++;
+		if([players count] == pindex){
+			//first player
+			currentPlayer = [players objectAtIndex:0];
+		}else {
+			//next player
+			currentPlayer = [players objectAtIndex:pindex];
+		}
+	}//else player stays the same
+	//send notifications
 }
 
 @end

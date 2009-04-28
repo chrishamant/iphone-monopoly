@@ -19,12 +19,17 @@ typedef struct{
 
 @interface GameController : NSObject {
 	NSArray* players;
+	Player* currentPlayer;
 	GameBoard* board;
 }
 
+
 -(Roll)rollDice;
 -(id)initWithPlayers:(NSArray*)players;
--(IBAction) playerTakeTurn:(id)sender;
--(void)startGame;
+-(Player*)currentPlayer;
+-(void)playerTakeTurn;
+
+@property(retain) GameBoard* board;
+@property(retain,readonly) Player* currentPlayer;
 
 @end

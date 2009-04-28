@@ -12,6 +12,6 @@
 	NSArray* relatedSpaces;
 }
 
--(NSInteger*)calcRent;
+-(int)calcRent;
 
 @end

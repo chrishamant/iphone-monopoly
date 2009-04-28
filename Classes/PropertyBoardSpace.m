@@ -8,5 +8,7 @@
 
 
 @implementation PropertyBoardSpace
-
+-(int)calcRent{
+	return 100;
+}
 @end

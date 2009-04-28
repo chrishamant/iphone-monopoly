@@ -69,10 +69,10 @@
 		<string>Baltic Avenue</string>
 	</dict>
 	<dict>
+		<key>isProperty</key>
+		<false/>
 		<key>title</key>
 		<string>Income Tax</string>
-		<key>cost</key>
-		<integer>0</integer>
 	</dict>
 	<dict>
 		<key>propertyType</key>

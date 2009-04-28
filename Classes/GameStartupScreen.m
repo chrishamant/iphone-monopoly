@@ -37,11 +37,12 @@
 
 - (void)startMonopolyGame:(id)sender{
 	NSLog(@"Trying to start Monopoly Game");
-
+	
 	GameController* game = [[GameController alloc] initWithPlayers:players];
-	[theapp startMonopoly:game];
 	
 	[[self view] removeFromSuperview];	
+	[theapp startMonopoly:game];
+	
 }
 
 

@@ -6,7 +6,6 @@
 
 #import "GameBoard.h"
 
-
 @implementation GameBoard
 @synthesize spaces;
 
@@ -18,15 +17,38 @@
 
 -(id) init{
 	self = [super init];
-	
-	[self setSpaces:[NSMutableArray arrayWithCapacity:40]];
-	//need to get better way of doing this... will need more info later
-	//read from plist
-	for(int i=0;i<40;i++){
-		[spaces insertObject:[[GameBoardSpace alloc] initWithTitle:@"a space"] atIndex:i];
-	}
-	
+	[self getSpacesFromStore];
 	return self;
+}
+
+-(void)getSpacesFromStore{
+	NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"MonopolySpaces" ofType:@"plist"];
+	NSArray* fromPlist = [NSArray arrayWithContentsOfFile:plistPath];
+	int count = [fromPlist count];
+	NSMutableArray* thespaces = [NSMutableArray arrayWithCapacity:count];
+	NSDictionary* temp;
+	NSNumber *test;
+	for(int i=0;i<count;i++){
+		temp = [fromPlist objectAtIndex:i];
+		test = [temp objectForKey:@"isProperty"];
+		if([test boolValue]){
+			[thespaces addObject:[self getPropertySpaceFromDict:temp] ];
+		}else{
+			[thespaces addObject:[[GameBoardSpace alloc] initWithTitle:[temp objectForKey:@"title"]]];
+		}
+	}
+	[self setSpaces:[NSArray arrayWithArray:thespaces]];
+	/*[fromPlist release];
+	[plistPath release]; 
+	[thespaces release];*/
+	//TODO Figure out why this is crashing when these are released...
+}
+
+-(id)getPropertySpaceFromDict:(NSDictionary*)dict{
+	id spaceToReturn;
+	spaceToReturn = [[PropertyBoardSpace alloc] initWithTitle:[dict objectForKey:@"title"]];
+	NSLog(@"%@",[dict objectForKey:@"title"]);
+	return spaceToReturn;
 }
 
 @end

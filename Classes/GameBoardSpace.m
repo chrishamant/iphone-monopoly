@@ -8,6 +8,7 @@
 
 
 @implementation GameBoardSpace
+@synthesize title;
 
 -(id)initWithTitle:(NSString*)t{
 	if(self = [super init]){
@@ -21,6 +22,6 @@
 	//stubbing for now
 }
 
-@synthesize title;
+
 
 @end

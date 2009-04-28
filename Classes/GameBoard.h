@@ -6,13 +6,16 @@
 
 #import <Foundation/Foundation.h>
 #import "GameBoardSpace.h"
+#import "PropertyBoardSpace.h"
+#import "ImprovablePropertySpace.h"
 
 @interface GameBoard : NSObject{
-	NSMutableArray* spaces;
+	NSArray* spaces;
 }
 
-@property(nonatomic,retain) NSMutableArray* spaces;
+@property(nonatomic,retain) NSArray* spaces;
 
 -(GameBoardSpace*)getNewSpace:(GameBoardSpace*)fromSpace rolling:(int)numSpaces;
-
+-(void)getSpacesFromStore;
+-(id)getPropertySpaceFromDict:(NSDictionary*)dict;
 @end

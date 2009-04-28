@@ -34,6 +34,8 @@
 		839EB7FD0FA18442005CB448 /* PlayersScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EB7FB0FA18442005CB448 /* PlayersScreen.xib */; };
 		839EB9190FA19404005CB448 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 839EB9180FA19404005CB448 /* Default.png */; };
 		83BA2E050F9CFB12005A76F1 /* GameStartupScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */; };
+		83DFDF6D0FA6D56800A616A7 /* PropertyBoardSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DFDF6C0FA6D56800A616A7 /* PropertyBoardSpace.m */; };
+		83DFDF710FA6D63200A616A7 /* ImprovablePropertySpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DFDF700FA6D63200A616A7 /* ImprovablePropertySpace.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +78,10 @@
 		839EB9180FA19404005CB448 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		83BA2E020F9CFB12005A76F1 /* GameStartupScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartupScreen.h; sourceTree = "<group>"; };
 		83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartupScreen.m; sourceTree = "<group>"; };
+		83DFDF6B0FA6D56800A616A7 /* PropertyBoardSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyBoardSpace.h; sourceTree = "<group>"; };
+		83DFDF6C0FA6D56800A616A7 /* PropertyBoardSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyBoardSpace.m; sourceTree = "<group>"; };
+		83DFDF6F0FA6D63200A616A7 /* ImprovablePropertySpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImprovablePropertySpace.h; sourceTree = "<group>"; };
+		83DFDF700FA6D63200A616A7 /* ImprovablePropertySpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImprovablePropertySpace.m; sourceTree = "<group>"; };
 		8D1107310486CEB800E47090 /* Monopoly-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Monopoly-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -174,6 +180,10 @@
 				839CF9DF0F89B2B2001505FD /* GameBoardSpace.m */,
 				831A82140F8949C600ACCE76 /* Die.h */,
 				831A82150F8949C600ACCE76 /* Die.m */,
+				83DFDF6B0FA6D56800A616A7 /* PropertyBoardSpace.h */,
+				83DFDF6C0FA6D56800A616A7 /* PropertyBoardSpace.m */,
+				83DFDF6F0FA6D63200A616A7 /* ImprovablePropertySpace.h */,
+				83DFDF700FA6D63200A616A7 /* ImprovablePropertySpace.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -288,6 +298,8 @@
 				839EB7EF0FA18322005CB448 /* GameScreen.m in Sources */,
 				839EB7F40FA18335005CB448 /* BoardScreen.m in Sources */,
 				839EB7FC0FA18442005CB448 /* PlayersScreen.m in Sources */,
+				83DFDF6D0FA6D56800A616A7 /* PropertyBoardSpace.m in Sources */,
+				83DFDF710FA6D63200A616A7 /* ImprovablePropertySpace.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,8 +12,9 @@
 	NSString* title;
 }
 
--(void)performSpaceActionsWith:(GameBoard*)board:AndPlayer:(Player*)player;
+-(void)performSpaceActionsWithBoard:(GameBoard*)board AndPlayer:(Player*)player;
+-(id)initWithTitle:(NSString*)t;
 
-@property (copy) NSString* title;
+@property(copy) NSString* title;
 
 @end

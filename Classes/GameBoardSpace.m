@@ -9,14 +9,14 @@
 
 @implementation GameBoardSpace
 
--(id)init{
+-(id)initWithTitle:(NSString*)t{
 	if(self = [super init]){
-		[self setTitle:@"a space"];
+		[self setTitle:t];
 	}
 	return self;
 }
 
--(void)performSpaceActionsWith:(GameBoard*)board:AndPlayer:(Player*)player{
+-(void)performSpaceActionsWithBoard:(GameBoard*)board AndPlayer:(Player*)player{
 	;
 	//stubbing for now
 }

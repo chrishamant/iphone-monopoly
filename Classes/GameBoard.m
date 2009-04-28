@@ -23,7 +23,7 @@
 	//need to get better way of doing this... will need more info later
 	//read from plist
 	for(int i=0;i<40;i++){
-		[spaces insertObject:[[GameBoardSpace alloc] init] atIndex:i];
+		[spaces insertObject:[[GameBoardSpace alloc] initWithTitle:@"a space"] atIndex:i];
 	}
 	
 	return self;

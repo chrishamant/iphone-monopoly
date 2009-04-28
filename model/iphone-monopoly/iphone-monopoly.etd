@@ -65,14 +65,26 @@
 <UML:Class xmi.id="DCE.A346764E-25E0-7EC4-6047-1328AB5A5DF8" name="GameBoardSpace" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538" specialization="DCE.C285B485-80BE-0812-0B67-6ED23F5582A5 DCE.6211440A-FFD3-2D30-CCBB-0B58504F342B"><UML:Element.presentation>
 
 
+
+
 </UML:Element.presentation><UML:Element.ownedElement>
 <UML:Attribute xmi.id="DCE.1ECE7CA3-FCA8-0F8E-A9A2-BDEEAB6D4B9E" visibility="private" name="title" type="DCE.7DCF5A31-DBCA-DF1D-5D69-B862730F638B" owner="DCE.A346764E-25E0-7EC4-6047-1328AB5A5DF8"><UML:Element.presentation>
+
+
 
 
 </UML:Element.presentation><UML:TypedElement.multiplicity>
 <UML:Multiplicity xmi.id="DCE.3A099B09-07EB-7A45-6B7B-B85A8278A8B9"/></UML:TypedElement.multiplicity><UML:Attribute.default>
 <UML:Expression xmi.id="DCE.0930FFCB-B9F9-510D-EA6F-49D265A74479"/></UML:Attribute.default></UML:Attribute>
-</UML:Element.ownedElement><UML:Classifier.generalization>
+
+<UML:Operation xmi.id="DCE.8243A68C-BF0D-9DC8-B534-A56C46343603" name="performSpaceActionsWithBoardAndPlayer" owner="DCE.A346764E-25E0-7EC4-6047-1328AB5A5DF8"><UML:Element.ownedElement>
+<UML:Parameter xmi.id="DCE.5104AFE4-9676-8BBE-FA65-9CC43CE2B25F" type="DCE.42B9A9C6-9FE6-05D4-E993-26F4C2C6A79F" direction="result" owner="DCE.8243A68C-BF0D-9DC8-B534-A56C46343603"><UML:TypedElement.multiplicity>
+<UML:Multiplicity xmi.id="DCE.88E55FBE-BBF9-9CD6-60A9-249ED3199487"/></UML:TypedElement.multiplicity></UML:Parameter>
+<UML:Parameter xmi.id="DCE.A4A1F4A1-8B5F-38E5-69D9-C7141C399E19" type="DCE.7F08ACF5-6E71-5DE1-08DA-8EC3DB8877C5" name="b" owner="DCE.8243A68C-BF0D-9DC8-B534-A56C46343603"><UML:TypedElement.multiplicity>
+<UML:Multiplicity xmi.id="DCE.05AA6E9B-CB73-C383-AB26-A4E9A39CB46D"/></UML:TypedElement.multiplicity></UML:Parameter>
+<UML:Parameter xmi.id="DCE.85B0797A-923D-203A-A78D-8A2E51EB52A3" type="DCE.2E8176A3-169A-BFF1-0603-CE29ED707304" name="p" owner="DCE.8243A68C-BF0D-9DC8-B534-A56C46343603"><UML:TypedElement.multiplicity>
+<UML:Multiplicity xmi.id="DCE.0AFBC05C-5F22-4CE9-C11B-3E23DF7F581D"/></UML:TypedElement.multiplicity></UML:Parameter></UML:Element.ownedElement><UML:Element.presentation>
+</UML:Element.presentation></UML:Operation></UML:Element.ownedElement><UML:Classifier.generalization>
 <UML:Generalization xmi.id="DCE.62A364ED-6F8B-1F00-84A7-C0069E84D809" specific="DCE.A346764E-25E0-7EC4-6047-1328AB5A5DF8" general="DCE.E42BE45A-E9D7-C0FD-7902-9B8F5AC28629"><UML:Element.presentation>
 </UML:Element.presentation></UML:Generalization></UML:Classifier.generalization></UML:Class>
 <UML:DataType xmi.id="DCE.7DCF5A31-DBCA-DF1D-5D69-B862730F638B" name="NSString" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"/>
@@ -198,6 +210,7 @@
 <UML:Multiplicity xmi.id="DCE.061E69F8-D546-D73D-79EF-7FAC00C6DCC8"/></UML:TypedElement.multiplicity></UML:Parameter>
 <UML:Parameter xmi.id="DCE.82C813A8-CF47-3D4B-DBD2-28FE5D3C7FD9" type="DCE.FBD22B2A-71EF-44D1-29F5-ABC963CA3D10" name="sender" owner="DCE.D629AA10-2A57-D690-1DD0-1966897D15F6"><UML:TypedElement.multiplicity>
 <UML:Multiplicity xmi.id="DCE.741233A7-5860-A701-93DE-9F712B40BE17"/></UML:TypedElement.multiplicity></UML:Parameter></UML:Element.ownedElement><UML:Element.presentation>
+
 </UML:Element.presentation></UML:Operation></UML:Element.ownedElement></UML:Class>
 <UML:Class xmi.id="DCE.3F5451D2-0116-FBD5-12BC-9D3B1CEEDB20" name="PlayersScreen" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"><UML:Element.presentation>
 </UML:Element.presentation><UML:Classifier.generalization>
@@ -472,27 +485,49 @@
 
 
 <UML:Enumeration xmi.id="DCE.865EEB10-07FF-4F2A-D5E9-1D52C3A4F444" name="PropertySpaceTypes" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"><UML:Element.presentation>
+
 </UML:Element.presentation><UML:Enumeration.literal>
 <UML:EnumerationLiteral xmi.id="DCE.2AA162E5-AB62-5314-C6A6-54B026271D8A" enumeration="DCE.865EEB10-07FF-4F2A-D5E9-1D52C3A4F444" name="Utility"><UML:Element.presentation>
+
+
 </UML:Element.presentation></UML:EnumerationLiteral>
 <UML:EnumerationLiteral xmi.id="DCE.F949204A-A98C-5C7E-61F8-30188F7ACBD8" enumeration="DCE.865EEB10-07FF-4F2A-D5E9-1D52C3A4F444" name="Railroad"><UML:Element.presentation>
+
+
 </UML:Element.presentation></UML:EnumerationLiteral>
 <UML:EnumerationLiteral xmi.id="DCE.12161D0C-D427-8ED0-4FEF-75CC3A34B907" enumeration="DCE.865EEB10-07FF-4F2A-D5E9-1D52C3A4F444" name="Improvable"><UML:Element.presentation>
+
+
 </UML:Element.presentation></UML:EnumerationLiteral></UML:Enumeration.literal></UML:Enumeration>
-<UML:Class xmi.id="DCE.07A23D5C-420E-DD31-B1C9-080B2D9F417F" name="PropertyBoardSpace" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"><UML:Element.presentation>
+<UML:Class xmi.id="DCE.07A23D5C-420E-DD31-B1C9-080B2D9F417F" name="PropertyBoardSpace" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538" specialization="DCE.B1970CFD-3224-9043-F487-D6F9B85AA62E"><UML:Element.presentation>
+
 </UML:Element.presentation><UML:Classifier.generalization>
 <UML:Generalization xmi.id="DCE.6211440A-FFD3-2D30-CCBB-0B58504F342B" specific="DCE.07A23D5C-420E-DD31-B1C9-080B2D9F417F" general="DCE.A346764E-25E0-7EC4-6047-1328AB5A5DF8"><UML:Element.presentation>
+
 </UML:Element.presentation></UML:Generalization></UML:Classifier.generalization><UML:Element.ownedElement>
-<UML:Operation xmi.id="DCE.2E0B68D3-B682-8768-BBC7-2C54A7F30269" name="getRent" owner="DCE.07A23D5C-420E-DD31-B1C9-080B2D9F417F"><UML:Element.ownedElement>
-<UML:Parameter xmi.id="DCE.D62B126B-2662-D19E-B906-A36AD42C1CAD" type="DCE.42B9A9C6-9FE6-05D4-E993-26F4C2C6A79F" direction="result" owner="DCE.2E0B68D3-B682-8768-BBC7-2C54A7F30269"><UML:TypedElement.multiplicity>
+<UML:Operation xmi.id="DCE.2E0B68D3-B682-8768-BBC7-2C54A7F30269" name="calcRent" owner="DCE.07A23D5C-420E-DD31-B1C9-080B2D9F417F"><UML:Element.ownedElement>
+<UML:Parameter xmi.id="DCE.D62B126B-2662-D19E-B906-A36AD42C1CAD" type="DCE.93A74ED5-CBE1-661B-6F63-48FB71F93DCB" direction="result" owner="DCE.2E0B68D3-B682-8768-BBC7-2C54A7F30269"><UML:TypedElement.multiplicity>
 <UML:Multiplicity xmi.id="DCE.C8CC3AA6-E7B3-335E-DD61-022B991B48B2"/></UML:TypedElement.multiplicity></UML:Parameter></UML:Element.ownedElement><UML:Element.presentation>
-</UML:Element.presentation></UML:Operation></UML:Element.ownedElement></UML:Class>
+
+</UML:Element.presentation></UML:Operation>
+
+<UML:Attribute xmi.id="DCE.EA9CB7E1-F5CD-700F-0DCC-A99BDD6FF20C" visibility="private" name="cost" type="DCE.93A74ED5-CBE1-661B-6F63-48FB71F93DCB" owner="DCE.07A23D5C-420E-DD31-B1C9-080B2D9F417F"><UML:Element.presentation>
+</UML:Element.presentation><UML:TypedElement.multiplicity>
+<UML:Multiplicity xmi.id="DCE.E9D135D3-BFA0-C361-8BDD-AA6D11FC84C6"/></UML:TypedElement.multiplicity><UML:Attribute.default>
+<UML:Expression xmi.id="DCE.A5100D07-8C0B-F416-BE50-B28C97910691"/></UML:Attribute.default></UML:Attribute>
+<UML:Attribute xmi.id="DCE.8C7D38D0-90D4-ABBF-C923-484E0D05152E" visibility="private" name="relatedSpaces" type="DCE.2818F807-C777-DF32-077A-98A8F9064694" owner="DCE.07A23D5C-420E-DD31-B1C9-080B2D9F417F"><UML:Element.presentation>
+</UML:Element.presentation><UML:TypedElement.multiplicity>
+<UML:Multiplicity xmi.id="DCE.C5A1EC2A-7DA2-1D61-E7B5-C3182EB13423"/></UML:TypedElement.multiplicity><UML:Attribute.default>
+<UML:Expression xmi.id="DCE.D8E46952-34AC-3EBE-77C0-F609E50AD622"/></UML:Attribute.default></UML:Attribute></UML:Element.ownedElement></UML:Class>
 <UML:Interaction xmi.id="DCE.FD1CE57E-DAC1-97EA-2161-8534EDF52C12" name="DieRoll" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"><UML:Element.ownedElement>
 <UML:Lifeline xmi.id="DCE.3BF53ADF-3338-AECD-1173-2A19223718FF" owner="DCE.FD1CE57E-DAC1-97EA-2161-8534EDF52C12" actorLifeline="true" represents="DCE.8115A309-64A0-A90D-1A67-E099FC6CB053" events="DCE.C77ABFDC-EE55-7ADD-3076-9FC0BDF3AFB8"><UML:Element.presentation>
+
 </UML:Element.presentation></UML:Lifeline>
 <UML:Lifeline xmi.id="DCE.33220E31-5C7A-16CE-D1E8-D11248E5E2B7" owner="DCE.FD1CE57E-DAC1-97EA-2161-8534EDF52C12" represents="DCE.0C212C8E-C7AE-FD9B-EF2D-35E8954F8108" events="DCE.C7BB4ECB-10FB-7A05-F946-E438D15BC152 DCE.29DF1DFD-4AF7-1DD3-DA90-412DE94B5A85 DCE.8A364A78-4495-1583-971E-79CE81EA5E58 DCE.B25BCCBE-7A59-B0BB-70C4-4D9D5D46A34C DCE.7E540611-F400-CCAF-9E81-0D0B7F2519C9"><UML:Element.presentation>
+
 </UML:Element.presentation></UML:Lifeline>
 <UML:Comment xmi.id="DCE.DBF18E70-89B8-A668-28AD-323CB45FD016" owner="DCE.FD1CE57E-DAC1-97EA-2161-8534EDF52C12"><UML:Element.presentation>
+
 </UML:Element.presentation>
 <UML:Comment.body>Player is clicking button on nib. Target action calls this method</UML:Comment.body></UML:Comment>
 <UML:MessageConnector xmi.id="DCE.9B7F1926-A789-BA52-7C7C-4CF240A60133" visibility="private" name="Unnamed" fromLine="DCE.3BF53ADF-3338-AECD-1173-2A19223718FF" toLine="DCE.33220E31-5C7A-16CE-D1E8-D11248E5E2B7" owner="DCE.FD1CE57E-DAC1-97EA-2161-8534EDF52C12" message="DCE.F72C4EF9-1ABC-1419-BEFE-34A6F1A3BFF8"><UML:Element.ownedElement>
@@ -538,7 +573,19 @@
 <UML:InterGateConnector xmi.id="DCE.342FBB49-B8E7-0702-5853-8E44F0450C13" fromGate="DCE.92597755-1BFC-77EC-3E46-2A7C2C0B0803" toGate="DCE.15ACD96B-B19B-2A7D-D407-89AC6AEE2F51" fragment="DCE.FD1CE57E-DAC1-97EA-2161-8534EDF52C12"/>
 <UML:InterGateConnector xmi.id="DCE.F8AB3E60-3CAB-EE5A-57EC-25FBCA655A79" fromGate="DCE.F8528CAF-E4B4-118F-8818-2D717371A64B" toGate="DCE.BDA90FFC-8A45-7FCE-C8FA-BB8286E31916" fragment="DCE.FD1CE57E-DAC1-97EA-2161-8534EDF52C12"/>
 <UML:InterGateConnector xmi.id="DCE.A0DD38F7-6ABC-2DFC-DD2A-A7440D428DF2" fromGate="DCE.26FEDA95-9A69-54FC-78C3-853534A9C6F7" toGate="DCE.06D9EF07-7BFF-1FD9-04D3-DE0576D41123" fragment="DCE.FD1CE57E-DAC1-97EA-2161-8534EDF52C12"/></UML:InteractionFragment.gateConnector><UML:Interaction.message><UML:Message xmi.id="DCE.F72C4EF9-1ABC-1419-BEFE-34A6F1A3BFF8" sendEvent="DCE.C77ABFDC-EE55-7ADD-3076-9FC0BDF3AFB8" receiveEvent="DCE.C7BB4ECB-10FB-7A05-F946-E438D15BC152" initiatingAction="DCE.AC34D82F-8D1C-7100-5444-3901065FF9AC" interaction="DCE.FD1CE57E-DAC1-97EA-2161-8534EDF52C12" kind="asynchronous"><UML:Element.presentation>
-</UML:Element.presentation></UML:Message></UML:Interaction.message></UML:Interaction></UML:Element.ownedElement><UML:Package.packageImport>
+
+</UML:Element.presentation></UML:Message></UML:Interaction.message></UML:Interaction>
+
+
+<UML:Class xmi.id="DCE.1FC76CE8-9DD8-AECA-34E5-475FF8648B3D" name="ImprovablePropertySpace" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"><UML:Element.presentation>
+</UML:Element.presentation><UML:Classifier.generalization>
+<UML:Generalization xmi.id="DCE.B1970CFD-3224-9043-F487-D6F9B85AA62E" specific="DCE.1FC76CE8-9DD8-AECA-34E5-475FF8648B3D" general="DCE.07A23D5C-420E-DD31-B1C9-080B2D9F417F"><UML:Element.presentation>
+</UML:Element.presentation></UML:Generalization></UML:Classifier.generalization><UML:Element.ownedElement>
+<UML:Attribute xmi.id="DCE.325148A8-220B-CC0C-F02C-B0C3D4C67884" visibility="private" name="colorGroup" type="DCE.7A764C14-97DD-B2D9-E13E-A53D69F11C19" owner="DCE.1FC76CE8-9DD8-AECA-34E5-475FF8648B3D"><UML:Element.presentation>
+</UML:Element.presentation><UML:TypedElement.multiplicity>
+<UML:Multiplicity xmi.id="DCE.B6631139-7367-5F92-B0CD-2D2A32E280BB"/></UML:TypedElement.multiplicity><UML:Attribute.default>
+<UML:Expression xmi.id="DCE.E8F50688-5963-426A-8CB7-7266F25A2A86"/></UML:Attribute.default></UML:Attribute></UML:Element.ownedElement></UML:Class>
+<UML:DataType xmi.id="DCE.7A764C14-97DD-B2D9-E13E-A53D69F11C19" name="NSColor" owner="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"/></UML:Element.ownedElement><UML:Package.packageImport>
 <UML:PackageImport xmi.id="DCE.51821D4B-730C-7C10-C8AA-1C892C1FC246" importingPackage="DCE.BFC95FA2-EFF4-44C2-5BF2-2DD6E6F55538"><UML:PackageImport.importedPackage>
 <UML:Profile xmi.id="DCE.8FD29DC2-AFE9-90B8-A018-98FB2C6353FD" name="Unnamed" isCloned="true" href="./iphone-monopoly.etup#//*[@xmi.id=&apos;DCE.8FD29DC2-AFE9-90B8-A018-98FB2C6353FD&apos;]" isDirty="false"/></UML:PackageImport.importedPackage><UML:Element.ownedElement>
 <UML:TaggedValue xmi.id="DCE.411D7664-CA4E-2FD2-3FEE-CA773EB8330D" owner="DCE.51821D4B-730C-7C10-C8AA-1C892C1FC246" name="autoCreated">

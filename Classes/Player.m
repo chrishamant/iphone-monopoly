@@ -20,4 +20,11 @@
 	return self;
 }
 
+- (void)dealloc {
+    [super dealloc];
+	[title release];
+	[currentSpace release];
+	[token release];
+}
+
 @end

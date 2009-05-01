@@ -34,7 +34,7 @@
 		if([test boolValue]){
 			[thespaces addObject:[self getPropertySpaceFromDict:temp] ];
 		}else{
-			[thespaces addObject:[[GameBoardSpace alloc] initWithTitle:[temp objectForKey:@"title"]]];
+			[thespaces addObject:[[[GameBoardSpace alloc] initWithTitle:[temp objectForKey:@"title"]] autorelease]];
 		}
 	}
 	[self setSpaces:[NSArray arrayWithArray:thespaces]];
@@ -48,7 +48,13 @@
 	id spaceToReturn;
 	spaceToReturn = [[PropertyBoardSpace alloc] initWithTitle:[dict objectForKey:@"title"]];
 	NSLog(@"%@",[dict objectForKey:@"title"]);
+	[spaceToReturn autorelease];
 	return spaceToReturn;
+}
+
+- (void)dealloc {
+    [super dealloc];
+	[spaces release];
 }
 
 @end

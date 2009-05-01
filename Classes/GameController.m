@@ -40,6 +40,7 @@
 	[super dealloc];
 	[players release];
 	[currentPlayer release];
+	[board release];
 }
 
 -(void) playerTakeTurn{

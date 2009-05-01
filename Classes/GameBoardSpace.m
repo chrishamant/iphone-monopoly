@@ -22,6 +22,10 @@
 	//stubbing for now
 }
 
+- (void)dealloc {
+    [super dealloc];
+	[title release];
+}
 
 
 @end

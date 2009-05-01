@@ -11,4 +11,8 @@
 
 @implementation ImprovablePropertySpace
 
+- (void)dealloc {
+    [super dealloc];
+}
+
 @end

@@ -10,6 +10,7 @@
 
 @synthesize board;
 @synthesize currentPlayer;
+@synthesize players;
 
 -(Roll)rollDice{
 	Roll roll;

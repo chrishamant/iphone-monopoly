@@ -5,15 +5,17 @@
 //
 
 #import "PlayersScreen.h"
-
+#import "Player.h"
+#import "PlayerScreenDetail.h"
 
 @implementation PlayersScreen
-
+@synthesize players;
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
-        [self setTitle:@"Players"];
+- (id)initWithPlayers:(NSArray*) theplayers {
+    if (self = [super initWithNibName:@"PlayersScreen" bundle:nil]) {
+		[self setPlayers:theplayers];
+		[self setTitle:@"Players"];
     }
     return self;
 }
@@ -23,7 +25,8 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	//self.view = nav.view;
+	[nav setTitle:@"Players"];
+	self.view = nav.view;
 }
 
 
@@ -47,9 +50,28 @@
 	// e.g. self.myOutlet = nil;
 }
 
-
 - (void)dealloc {
     [super dealloc];
+}
+
+#pragma mark UITableViewDataSource/UITableViewDelegate Protocol
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+	return [players count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+	UITableViewCell* cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:nil];
+	[cell autorelease];
+	cell.textLabel.text = [[players objectAtIndex:indexPath.row] title];
+	return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+	NSLog(@"selected row %d",indexPath.row);
+	UIViewController* pdetail = [[PlayerScreenDetail alloc] initWithPlayer:[players objectAtIndex:indexPath.row]];
+	[nav pushViewController:pdetail animated:YES];
+	[pdetail release];
 }
 
 

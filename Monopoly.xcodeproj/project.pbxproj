@@ -22,6 +22,8 @@
 		83830CC80F9EF5FE00C47AAC /* monopoly-man.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 83830CC70F9EF5FE00C47AAC /* monopoly-man.jpg */; };
 		83830CCB0F9EF78E00C47AAC /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 83830CC90F9EF78E00C47AAC /* Icon.png */; };
 		83830CCC0F9EF78E00C47AAC /* Icon512.png in Resources */ = {isa = PBXBuildFile; fileRef = 83830CCA0F9EF78E00C47AAC /* Icon512.png */; };
+		8384CAD20FAC1AD800309647 /* PlayerScreenDetail.m in Sources */ = {isa = PBXBuildFile; fileRef = 8384CAD00FAC1AD800309647 /* PlayerScreenDetail.m */; };
+		8384CAD30FAC1AD800309647 /* PlayerScreenDetail.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8384CAD10FAC1AD800309647 /* PlayerScreenDetail.xib */; };
 		839B71E30F9BADF8007C2A7C /* Monopoly.xcclassmodel in Resources */ = {isa = PBXBuildFile; fileRef = 839B71E20F9BADF8007C2A7C /* Monopoly.xcclassmodel */; };
 		839CF9DA0F89B13B001505FD /* GameBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 839CF9D90F89B13B001505FD /* GameBoard.m */; };
 		839CF9E00F89B2B2001505FD /* GameBoardSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 839CF9DF0F89B2B2001505FD /* GameBoardSpace.m */; };
@@ -60,6 +62,9 @@
 		83830CC70F9EF5FE00C47AAC /* monopoly-man.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "monopoly-man.jpg"; sourceTree = "<group>"; };
 		83830CC90F9EF78E00C47AAC /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
 		83830CCA0F9EF78E00C47AAC /* Icon512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon512.png; sourceTree = "<group>"; };
+		8384CACF0FAC1AD800309647 /* PlayerScreenDetail.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerScreenDetail.h; sourceTree = "<group>"; };
+		8384CAD00FAC1AD800309647 /* PlayerScreenDetail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerScreenDetail.m; sourceTree = "<group>"; };
+		8384CAD10FAC1AD800309647 /* PlayerScreenDetail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayerScreenDetail.xib; sourceTree = "<group>"; };
 		839B71E20F9BADF8007C2A7C /* Monopoly.xcclassmodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcclassmodel; path = Monopoly.xcclassmodel; sourceTree = "<group>"; };
 		839CF9D80F89B13B001505FD /* GameBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameBoard.h; sourceTree = "<group>"; };
 		839CF9D90F89B13B001505FD /* GameBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameBoard.m; sourceTree = "<group>"; };
@@ -199,6 +204,8 @@
 				839EB7ED0FA18322005CB448 /* GameScreen.m */,
 				83BA2E020F9CFB12005A76F1 /* GameStartupScreen.h */,
 				83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */,
+				8384CACF0FAC1AD800309647 /* PlayerScreenDetail.h */,
+				8384CAD00FAC1AD800309647 /* PlayerScreenDetail.m */,
 			);
 			name = GuiControl;
 			sourceTree = "<group>";
@@ -210,6 +217,7 @@
 				839EB7EE0FA18322005CB448 /* GameScreen.xib */,
 				839EB7F30FA18335005CB448 /* BoardScreen.xib */,
 				839EB7FB0FA18442005CB448 /* PlayersScreen.xib */,
+				8384CAD10FAC1AD800309647 /* PlayerScreenDetail.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -276,6 +284,7 @@
 				839EB7FD0FA18442005CB448 /* PlayersScreen.xib in Resources */,
 				839EB9190FA19404005CB448 /* Default.png in Resources */,
 				837B68400FA2E20B00C72CF5 /* Monopoly Board.jpg in Resources */,
+				8384CAD30FAC1AD800309647 /* PlayerScreenDetail.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +309,7 @@
 				839EB7FC0FA18442005CB448 /* PlayersScreen.m in Sources */,
 				83DFDF6D0FA6D56800A616A7 /* PropertyBoardSpace.m in Sources */,
 				83DFDF710FA6D63200A616A7 /* ImprovablePropertySpace.m in Sources */,
+				8384CAD20FAC1AD800309647 /* PlayerScreenDetail.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

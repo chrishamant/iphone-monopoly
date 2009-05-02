@@ -19,7 +19,7 @@
 	 [NSArray arrayWithObjects:
 	  [[[GameScreen alloc] initWithGame:aGame] autorelease],
 	  [[[BoardScreen alloc] initWithNibName:@"BoardScreen" bundle:nil] autorelease],
-	  [[[PlayersScreen alloc] initWithNibName:@"PlayersScreen" bundle:nil] autorelease],
+	  [[[PlayersScreen alloc] initWithPlayers:aGame.players] autorelease],
 	  nil]];
 	[tab setSelectedIndex:0];
 	

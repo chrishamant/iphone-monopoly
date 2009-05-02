@@ -24,7 +24,10 @@
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	
+	[scrollview setContentSize:CGSizeMake(board.frame.size.width, board.frame.size.height)];
+	scrollview.maximumZoomScale = 4.0;
+	scrollview.minimumZoomScale = .50;
+	[scrollview addSubview:board];
 }
 
 
@@ -63,6 +66,10 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 	NSLog(@"end!");
+}
+
+-(UIView*)viewForZoomingInScrollView:(UIScrollView*)scroll{
+	return board;
 }
 
 @end

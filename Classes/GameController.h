@@ -30,6 +30,7 @@ typedef struct{
 -(void)playerTakeTurn;
 
 @property(retain) GameBoard* board;
+@property(retain) NSArray* players;
 @property(retain,readonly) Player* currentPlayer;
 
 @end

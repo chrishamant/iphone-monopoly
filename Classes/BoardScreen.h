@@ -8,8 +8,9 @@
 #import <UIKit/UIKit.h>
 
 
-@interface BoardScreen : UIViewController {
+@interface BoardScreen : UIViewController<UIScrollViewDelegate> {
 	IBOutlet UIImageView* board;
+	IBOutlet UIScrollView* scrollview;
 }
 
 @end

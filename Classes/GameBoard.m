@@ -27,14 +27,35 @@
 	int count = [fromPlist count];
 	NSMutableArray* thespaces = [NSMutableArray arrayWithCapacity:count];
 	NSDictionary* temp;
-	NSNumber *test;
+	
 	for(int i=0;i<count;i++){
 		temp = [fromPlist objectAtIndex:i];
-		test = [temp objectForKey:@"isProperty"];
-		if([test boolValue]){
-			[thespaces addObject:[self getPropertySpaceFromDict:temp] ];
-		}else{
-			[thespaces addObject:[[[GameBoardSpace alloc] initWithTitle:[temp objectForKey:@"title"]] autorelease]];
+		int spaceType = [[temp objectForKey:@"spaceType"] intValue];
+		switch (spaceType) {
+			case 0:
+				//regular space (inert)
+				[thespaces addObject:[[[GameBoardSpace alloc] initWithTitle:[temp objectForKey:@"title"]] autorelease]];
+				break;
+			case 1:
+				//railroad
+				[thespaces addObject: [[[PropertyBoardSpace alloc] initFromDict:temp] autorelease]];
+				break;
+			case 2:
+				//utility
+				[thespaces addObject: [[[PropertyBoardSpace alloc] initFromDict:temp] autorelease]];
+				break;
+			case 3:
+				//improvable
+				[thespaces addObject: [[[ImprovablePropertySpace alloc] initFromDict:temp] autorelease]];
+				break;
+			case 4:
+				//action space
+				[thespaces addObject: [[[PropertyBoardSpace alloc] initFromDict:temp] autorelease]];
+				break;
+			default:
+				//this should never happen
+				assert(0);
+				break;
 		}
 	}
 	[self setSpaces:[NSArray arrayWithArray:thespaces]];
@@ -46,8 +67,7 @@
 
 -(id)getPropertySpaceFromDict:(NSDictionary*)dict{
 	id spaceToReturn;
-	spaceToReturn = [[PropertyBoardSpace alloc] initWithTitle:[dict objectForKey:@"title"]];
-	NSLog(@"%@",[dict objectForKey:@"title"]);
+	spaceToReturn = 
 	[spaceToReturn autorelease];
 	return spaceToReturn;
 }

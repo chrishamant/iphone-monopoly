@@ -11,8 +11,10 @@
 	NSString* title;
 	GameBoardSpace* currentSpace;
 	UIImage* token;
+	int cash;
 }
 @property (copy) NSString* title;
+@property int cash;
 @property (retain) GameBoardSpace* currentSpace;
 @property (retain) UIImage* token;
 

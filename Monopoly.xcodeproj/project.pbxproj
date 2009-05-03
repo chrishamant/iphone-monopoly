@@ -36,6 +36,8 @@
 		839EB7FD0FA18442005CB448 /* PlayersScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EB7FB0FA18442005CB448 /* PlayersScreen.xib */; };
 		839EB9190FA19404005CB448 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 839EB9180FA19404005CB448 /* Default.png */; };
 		83BA2E050F9CFB12005A76F1 /* GameStartupScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */; };
+		83DAFEFC0FAD5D23001227D6 /* PreGameSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DAFEFA0FAD5D23001227D6 /* PreGameSettings.m */; };
+		83DAFEFD0FAD5D23001227D6 /* PreGameSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83DAFEFB0FAD5D23001227D6 /* PreGameSettings.xib */; };
 		83DFDF6D0FA6D56800A616A7 /* PropertyBoardSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DFDF6C0FA6D56800A616A7 /* PropertyBoardSpace.m */; };
 		83DFDF710FA6D63200A616A7 /* ImprovablePropertySpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 83DFDF700FA6D63200A616A7 /* ImprovablePropertySpace.m */; };
 /* End PBXBuildFile section */
@@ -83,6 +85,9 @@
 		839EB9180FA19404005CB448 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		83BA2E020F9CFB12005A76F1 /* GameStartupScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartupScreen.h; sourceTree = "<group>"; };
 		83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartupScreen.m; sourceTree = "<group>"; };
+		83DAFEF90FAD5D23001227D6 /* PreGameSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreGameSettings.h; sourceTree = "<group>"; };
+		83DAFEFA0FAD5D23001227D6 /* PreGameSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreGameSettings.m; sourceTree = "<group>"; };
+		83DAFEFB0FAD5D23001227D6 /* PreGameSettings.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PreGameSettings.xib; sourceTree = "<group>"; };
 		83DFDF6B0FA6D56800A616A7 /* PropertyBoardSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PropertyBoardSpace.h; sourceTree = "<group>"; };
 		83DFDF6C0FA6D56800A616A7 /* PropertyBoardSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PropertyBoardSpace.m; sourceTree = "<group>"; };
 		83DFDF6F0FA6D63200A616A7 /* ImprovablePropertySpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImprovablePropertySpace.h; sourceTree = "<group>"; };
@@ -206,6 +211,8 @@
 				83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */,
 				8384CACF0FAC1AD800309647 /* PlayerScreenDetail.h */,
 				8384CAD00FAC1AD800309647 /* PlayerScreenDetail.m */,
+				83DAFEF90FAD5D23001227D6 /* PreGameSettings.h */,
+				83DAFEFA0FAD5D23001227D6 /* PreGameSettings.m */,
 			);
 			name = GuiControl;
 			sourceTree = "<group>";
@@ -218,6 +225,7 @@
 				839EB7F30FA18335005CB448 /* BoardScreen.xib */,
 				839EB7FB0FA18442005CB448 /* PlayersScreen.xib */,
 				8384CAD10FAC1AD800309647 /* PlayerScreenDetail.xib */,
+				83DAFEFB0FAD5D23001227D6 /* PreGameSettings.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -285,6 +293,7 @@
 				839EB9190FA19404005CB448 /* Default.png in Resources */,
 				837B68400FA2E20B00C72CF5 /* Monopoly Board.jpg in Resources */,
 				8384CAD30FAC1AD800309647 /* PlayerScreenDetail.xib in Resources */,
+				83DAFEFD0FAD5D23001227D6 /* PreGameSettings.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +319,7 @@
 				83DFDF6D0FA6D56800A616A7 /* PropertyBoardSpace.m in Sources */,
 				83DFDF710FA6D63200A616A7 /* ImprovablePropertySpace.m in Sources */,
 				8384CAD20FAC1AD800309647 /* PlayerScreenDetail.m in Sources */,
+				83DAFEFC0FAD5D23001227D6 /* PreGameSettings.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

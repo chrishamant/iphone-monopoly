@@ -11,7 +11,6 @@
 	GameController* game;
 	IBOutlet UILabel* playerName;
 	IBOutlet UILabel* currentSpace;
-	IBOutlet UILabel* actionResult;
 }
 
 @property(retain) GameController* game;

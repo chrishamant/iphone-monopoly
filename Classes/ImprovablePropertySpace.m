@@ -10,9 +10,18 @@
 
 
 @implementation ImprovablePropertySpace
+@synthesize color;
+
+-(id)initFromDict:(NSDictionary*) dict{
+	if(self = [super initFromDict:dict]){
+		[self setColor:[dict objectForKey:@"color"]];
+	}
+	return self;
+}
 
 - (void)dealloc {
     [super dealloc];
+	[color release];
 }
 
 @end

@@ -12,6 +12,7 @@
 @synthesize title;
 @synthesize currentSpace;
 @synthesize token;
+@synthesize cash;
 
 -(id)initWithTitle:(NSString*)name{
 	if(self = [super init]){

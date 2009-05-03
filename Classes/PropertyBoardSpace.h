@@ -8,10 +8,13 @@
 #import "GameBoardSpace.h"
 
 @interface PropertyBoardSpace : GameBoardSpace {
-	NSInteger* cost;
+	int cost;
 	NSArray* relatedSpaces;
 }
 
 -(int)calcRent;
+-(id)initFromDict:(NSDictionary*) dict;
 
+@property int cost;
+@property(retain,nonatomic) NSArray* relatedSpaces;
 @end

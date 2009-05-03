@@ -8,9 +8,9 @@
 #import <UIKit/UIKit.h>
 #import "Player.h"
 #import "GameController.h"
+#import "PreGameSettings.h"
 
-
-@interface GameStartupScreen : UIViewController {
+@interface GameStartupScreen : UIViewController<PreGameDelegate> {
 	NSMutableArray* players;
 	IBOutlet MonopolyAppDelegate* theapp;
 }

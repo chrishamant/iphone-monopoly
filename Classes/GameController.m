@@ -27,9 +27,11 @@
 		//initialize board
 		board = [[GameBoard alloc] init];
 		
-		//everyplayer should start at Go (index0)
 		for(id player in players){
+			//everyplayer should start at Go (index0)
 			[player setCurrentSpace:[[board spaces] objectAtIndex:0]];
+			//everyplayer should have $1500
+			[player setCash:1500];
 		}
 		currentPlayer = [players objectAtIndex:0];
 	}
@@ -60,7 +62,11 @@
 			currentPlayer = [players objectAtIndex:pindex];
 		}
 	}//else player stays the same
-	//send notifications
+	
+	//you rolled and landed on popup
+	
+	[currentPlayer.currentSpace performSpaceActionsWithBoard:board AndPlayer:currentPlayer];
+	
 }
 
 @end

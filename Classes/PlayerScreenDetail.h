@@ -13,6 +13,7 @@
 	Player* player;
 	IBOutlet UILabel* titleLabel;
 	IBOutlet UILabel* spaceLabel;
+	IBOutlet UILabel* money;
 }
 
 - (id)initWithPlayer:(Player*)p;

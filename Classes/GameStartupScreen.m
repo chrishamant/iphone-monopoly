@@ -29,10 +29,10 @@
 #pragma mark Implementation methods
 
 - (void)playerOptions:(id)sender{
-	NSLog(@"Options! Disabled for now..");
-	/*
-	 Launch modal View to let players choose#players and other player settings/attrs
-	 */
+	PreGameSettings *controller = [[PreGameSettings alloc] initWithNibName:@"PreGameSettings" bundle:nil];
+	controller.delegate = self;
+	controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+	[self presentModalViewController:controller animated:YES];	
 }
 
 - (void)startMonopolyGame:(id)sender{
@@ -44,5 +44,9 @@
 	[theapp startMonopoly:game];
 }
 
+- (void)flipsideViewControllerDidFinish:(PreGameSettings *)controller {
+    
+	[self dismissModalViewControllerAnimated:YES];
+}
 
 @end

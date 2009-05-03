@@ -18,8 +18,7 @@
 }
 
 -(void)performSpaceActionsWithBoard:(GameBoard*)board AndPlayer:(Player*)player{
-	;
-	//stubbing for now
+	//this general space actions should be like income tax or something
 }
 
 - (void)dealloc {

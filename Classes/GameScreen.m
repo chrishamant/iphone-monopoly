@@ -83,7 +83,6 @@
 #pragma mark Implementation methods
 
 -(void)rollAction:(id)sender{
-	[actionResult setText:@"Yhey! You Tried to roll!"];
 	[game playerTakeTurn];
 	[self updateDisplay];
 }

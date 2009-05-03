@@ -1,39 +1,32 @@
 //
-//  PlayerScreenDetail.m
+//  PreGameSettings.m
 //  Monopoly
 //
-//  Created by Chris Hamant on 5/2/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
-#import "PlayerScreenDetail.h"
-#import "Player.h"
-@class GameBoardSpace;
+#import "PreGameSettings.h"
 
-@implementation PlayerScreenDetail
-@synthesize player;
+
+@implementation PreGameSettings
+
+@synthesize players;
+@synthesize delegate;
 
  // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
-- (id)initWithPlayer:(Player*)p {
-    if (self = [super initWithNibName:@"PlayerScreenDetail" bundle:nil]) {
-		[self setPlayer:p];
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
+        // Custom initialization
     }
     return self;
 }
 
 
-
+/*
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
 - (void)viewDidLoad {
     [super viewDidLoad];
-	titleLabel.text = player.title;
-	spaceLabel.text = player.currentSpace.title;
-	money.text = [NSString stringWithFormat:@"$%d dollars",[player cash]];
 }
-
--(void)viewWillAppear{
-	NSLog(@"the view is appearings!");
-}
+*/
 
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
@@ -50,10 +43,27 @@
 
 - (void)dealloc {
     [super dealloc];
-	[player release];
-	[titleLabel release];
-	[spaceLabel release];
+	[players release];
 }
 
+- (IBAction)done {
+	[self.delegate flipsideViewControllerDidFinish:self];	
+}
+
+- (IBAction)showHideFields:(id)sender{
+	switch ([sender selectedSegmentIndex]) {
+		case 2:
+			[p4 setHidden:NO];
+		case 1:
+			[p3 setHidden:NO];
+			break;
+		default:
+			[p3 setHidden:YES];
+			[p4 setHidden:YES];
+			break;
+	}
+	[p3 setNeedsDisplay];
+	[p4 setNeedsDisplay];
+}
 
 @end

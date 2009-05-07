@@ -357,6 +357,9 @@
 				GCC_PREFIX_HEADER = Monopoly_Prefix.pch;
 				INFOPLIST_FILE = "Monopoly-Info.plist";
 				PRODUCT_NAME = Monopoly;
+				XCODEBUILD_PROJECT_FILE_PATH = "$(PROJECT_FILE_PATH)";
+				XCODEBUILD_PROJECT_NAME = "$(PROJECT_NAME)";
+				XCODEBUILD_TARGET_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};

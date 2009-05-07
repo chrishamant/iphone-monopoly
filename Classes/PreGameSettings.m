@@ -6,7 +6,6 @@
 
 #import "PreGameSettings.h"
 
-
 @implementation PreGameSettings
 
 @synthesize players;
@@ -53,17 +52,16 @@
 - (IBAction)showHideFields:(id)sender{
 	switch ([sender selectedSegmentIndex]) {
 		case 2:
-			[p4 setHidden:NO];
+			p4.enabled = YES;
 		case 1:
-			[p3 setHidden:NO];
+			p3.enabled = YES;
 			break;
 		default:
-			[p3 setHidden:YES];
-			[p4 setHidden:YES];
+			p3.enabled = NO;
+			p4.enabled = NO;
 			break;
 	}
-	[p3 setNeedsDisplay];
-	[p4 setNeedsDisplay];
+	[self.view setNeedsDisplay];
 }
 
 @end

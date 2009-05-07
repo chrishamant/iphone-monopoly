@@ -8,6 +8,7 @@
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
+			<integer value="69"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -32,7 +33,7 @@
 			</object>
 			<object class="IBUICustomObject" id="664661524"/>
 			<object class="IBUIWindow" id="117978783">
-				<nil key="NSNextResponder"/>
+				<reference key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
 				<object class="NSMutableArray" key="NSSubviews">
 					<bool key="EncodedWithXMLCoder">YES</bool>
@@ -44,7 +45,7 @@
 							<object class="IBUIImageView" id="841383441">
 								<reference key="NSNextResponder" ref="57734028"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{79, 194}, {161, 156}}</string>
+								<string key="NSFrame">{{82, 192}, {154, 152}}</string>
 								<reference key="NSSuperview" ref="57734028"/>
 								<object class="NSColor" key="IBUIBackgroundColor" id="646094869">
 									<int key="NSColorSpace">1</int>
@@ -61,7 +62,7 @@
 							<object class="IBUIButton" id="797547426">
 								<reference key="NSNextResponder" ref="57734028"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 403}, {280, 37}}</string>
+								<string key="NSFrame">{{19, 400}, {280, 40}}</string>
 								<reference key="NSSuperview" ref="57734028"/>
 								<reference key="IBUIBackgroundColor" ref="646094869"/>
 								<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -82,11 +83,15 @@
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MC4xOTYwNzg0MyAwLjMwOTgwMzkzIDAuNTIxNTY4NjYAA</bytes>
 								</object>
+								<object class="NSColor" key="IBUINormalTitleShadowColor" id="663581973">
+									<int key="NSColorSpace">3</int>
+									<bytes key="NSWhite">MAA</bytes>
+								</object>
 							</object>
 							<object class="IBUIButton" id="449088834">
 								<reference key="NSNextResponder" ref="57734028"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{20, 358}, {280, 37}}</string>
+								<string key="NSFrame">{{19, 352}, {280, 40}}</string>
 								<reference key="NSSuperview" ref="57734028"/>
 								<reference key="IBUIBackgroundColor" ref="646094869"/>
 								<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -103,6 +108,7 @@
 									<int key="NSColorSpace">1</int>
 									<bytes key="NSRGB">MC4xOTYwNzg0MyAwLjMwOTgwMzkzIDAuNTIxNTY4NjYAA</bytes>
 								</object>
+								<reference key="IBUINormalTitleShadowColor" ref="663581973"/>
 							</object>
 							<object class="IBUILabel" id="99680521">
 								<reference key="NSNextResponder" ref="57734028"/>
@@ -142,6 +148,7 @@
 					</object>
 				</object>
 				<string key="NSFrameSize">{320, 480}</string>
+				<reference key="NSSuperview"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
 					<bytes key="NSRGB">MC40OTQ1NjUxOSAwLjQ5NDU2NTE5IDAuNDk0NTY1MTkAA</bytes>
@@ -677,5 +684,6 @@
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.LastKnownRelativeProjectPath">../Monopoly.xcodeproj</string>
 		<int key="IBDocument.defaultPropertyAccessControl">3</int>
+		<string key="IBCocoaTouchPluginVersion">3.0</string>
 	</data>
 </archive>

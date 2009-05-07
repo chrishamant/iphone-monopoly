@@ -29,10 +29,10 @@
 #pragma mark Implementation methods
 
 - (void)playerOptions:(id)sender{
-	PreGameSettings *controller = [[PreGameSettings alloc] initWithNibName:@"PreGameSettings" bundle:nil];
-	controller.delegate = self;
-	controller.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-	[self presentModalViewController:controller animated:YES];	
+	pregame = [[PreGameSettings alloc] initWithNibName:@"PreGameSettings" bundle:nil];
+	pregame.delegate = self;
+	pregame.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+	[self presentModalViewController:pregame animated:YES];
 }
 
 - (void)startMonopolyGame:(id)sender{
@@ -45,8 +45,8 @@
 }
 
 - (void)flipsideViewControllerDidFinish:(PreGameSettings *)controller {
-    
 	[self dismissModalViewControllerAnimated:YES];
+	[pregame release];
 }
 
 @end

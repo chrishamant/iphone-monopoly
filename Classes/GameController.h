@@ -4,18 +4,21 @@
 //
 //
 
-typedef struct{
-	int r1;
-	int r2;
-} Roll;
-
-
 #import <Foundation/Foundation.h>
 #import "GameBoardSpace.h"
 #import "GameBoard.h"
 #import "Player.h"
 #import "Die.h"
 
+typedef struct{
+	int r1;
+	int r2;
+} Roll;
+
+typedef struct{
+	Roll roll;
+	Player* p;
+} PlayerGameTurn;
 
 @interface GameController : NSObject {
 	NSArray* players;
@@ -27,7 +30,7 @@ typedef struct{
 -(Roll)rollDice;
 -(id)initWithPlayers:(NSArray*)players;
 -(Player*)currentPlayer;
--(void)playerTakeTurn;
+-(PlayerGameTurn)playerTakeTurn;
 
 @property(retain) GameBoard* board;
 @property(retain) NSArray* players;

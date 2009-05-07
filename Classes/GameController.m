@@ -46,8 +46,13 @@
 	[board release];
 }
 
--(void) playerTakeTurn{
+-(PlayerGameTurn) playerTakeTurn{
 	Roll r = [self rollDice];
+	
+	PlayerGameTurn turn;
+	turn.roll = r;
+	turn.p = currentPlayer;
+	
 	currentPlayer.currentSpace = [board getNewSpace:currentPlayer.currentSpace rolling:(r.r1+r.r2)];
 	
 	if(r.r1 != r.r2){
@@ -63,10 +68,7 @@
 		}
 	}//else player stays the same
 	
-	//you rolled and landed on popup
-	
-	[currentPlayer.currentSpace performSpaceActionsWithBoard:board AndPlayer:currentPlayer];
-	
+	return turn;
 }
 
 @end

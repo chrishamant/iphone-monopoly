@@ -13,6 +13,7 @@
 @interface GameStartupScreen : UIViewController<PreGameDelegate> {
 	NSMutableArray* players;
 	IBOutlet MonopolyAppDelegate* theapp;
+	PreGameSettings *pregame;
 }
 
 @property (nonatomic, retain) NSMutableArray* players;

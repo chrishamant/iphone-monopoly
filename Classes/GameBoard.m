@@ -50,7 +50,7 @@
 				break;
 			case 4:
 				//action space
-				[thespaces addObject: [[[PropertyBoardSpace alloc] initFromDict:temp] autorelease]];
+				[thespaces addObject: [[[GameBoardSpace alloc] initWithTitle:[temp objectForKey:@"title"]] autorelease]];
 				break;
 			default:
 				//this should never happen

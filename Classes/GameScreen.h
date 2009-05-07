@@ -6,11 +6,14 @@
 
 #import <UIKit/UIKit.h>
 #import "GameController.h"
+#import "GameTurn.h"
 
-@interface GameScreen : UIViewController {
+@interface GameScreen : UIViewController<GameTurnDelegate> {
 	GameController* game;
 	IBOutlet UILabel* playerName;
 	IBOutlet UILabel* currentSpace;
+	IBOutlet UILabel* rent;
+	GameTurn *currentTurn;
 }
 
 @property(retain) GameController* game;

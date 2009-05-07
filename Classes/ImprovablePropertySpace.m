@@ -14,7 +14,9 @@
 
 -(id)initFromDict:(NSDictionary*) dict{
 	if(self = [super initFromDict:dict]){
+		//[UIColor 
 		[self setColor:[dict objectForKey:@"color"]];
+		[self setRelatedSpaces:[dict objectForKey:@"related"]];
 	}
 	return self;
 }

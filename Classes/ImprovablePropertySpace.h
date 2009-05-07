@@ -8,10 +8,12 @@
 #import "PropertyBoardSpace.h"
 
 @interface ImprovablePropertySpace : PropertyBoardSpace {
-	NSString* color; //until I can figure out wtf is wrong with NSColor
+	UIColor* color;
+	NSArray* rent;
+	
 }
 
 -(id)initFromDict:(NSDictionary*) dict;
 
-@property(retain,nonatomic) NSString* color;
+@property(retain,nonatomic) UIColor* color;
 @end

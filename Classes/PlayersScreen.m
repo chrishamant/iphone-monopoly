@@ -11,7 +11,10 @@
 @implementation PlayersScreen
 @synthesize players;
 
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
+/**
+ @param theplayers NSArray of players
+ @return pointer to self
+*/
 - (id)initWithPlayers:(NSArray*) theplayers {
     if (self = [super initWithNibName:@"PlayersScreen" bundle:nil]) {
 		[self setPlayers:theplayers];

@@ -83,15 +83,33 @@
 #pragma mark Implementation methods
 
 -(void)rollAction:(id)sender{
-	[game playerTakeTurn];
-	[self updateDisplay];
+	PlayerGameTurn turn = [game playerTakeTurn];
+	currentTurn = [[GameTurn alloc] initWithTurn:turn];
+	currentTurn.delegate = self;
+	//currentTurn.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+	//[self presentModalViewController:currentTurn animated:YES];
+	[self.view addSubview:currentTurn.view];
 }
 
 -(void)updateDisplay{
 	Player* p = [game currentPlayer];
 	[playerName setText:[p title]];
-	[currentSpace setText:[[p currentSpace] title]];
+	id sp = [p currentSpace];
+	[currentSpace setText:[sp title]];
+	if([sp isKindOfClass:[PropertyBoardSpace class]]){
+		[rent setText:[NSString stringWithFormat:@"Rent $%d",[sp calcRent]]];
+	}else{
+		[rent setText:@""];
+	}
 	[self.view setNeedsDisplay];
+}
+
+#pragma mark GameTurnDelegate Protocol
+- (void)turnComplete:(GameTurn*)controller{
+	[self updateDisplay];
+	[controller.view removeFromSuperview];
+	//[self dismissModalViewControllerAnimated:YES];
+	[currentTurn release];
 }
 
 @end

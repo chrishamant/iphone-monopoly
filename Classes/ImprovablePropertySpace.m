@@ -17,6 +17,7 @@
 		//[UIColor 
 		[self setColor:[dict objectForKey:@"color"]];
 		[self setRelatedSpaces:[dict objectForKey:@"related"]];
+		spaceType = IMPROVABLE; 
 	}
 	return self;
 }

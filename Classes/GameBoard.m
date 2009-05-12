@@ -32,23 +32,23 @@
 		temp = [fromPlist objectAtIndex:i];
 		int spaceType = [[temp objectForKey:@"spaceType"] intValue];
 		switch (spaceType) {
-			case 0:
+			case REGULAR:
 				//regular space (inert)
 				[thespaces addObject:[[[GameBoardSpace alloc] initWithTitle:[temp objectForKey:@"title"]] autorelease]];
 				break;
-			case 1:
+			case RAILROAD:
 				//railroad
 				[thespaces addObject: [[[PropertyBoardSpace alloc] initFromDict:temp] autorelease]];
 				break;
-			case 2:
+			case UTILITY:
 				//utility
 				[thespaces addObject: [[[PropertyBoardSpace alloc] initFromDict:temp] autorelease]];
 				break;
-			case 3:
+			case IMPROVABLE:
 				//improvable
 				[thespaces addObject: [[[ImprovablePropertySpace alloc] initFromDict:temp] autorelease]];
 				break;
-			case 4:
+			case ACTION:
 				//action space
 				[thespaces addObject: [[[GameBoardSpace alloc] initWithTitle:[temp objectForKey:@"title"]] autorelease]];
 				break;

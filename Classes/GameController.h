@@ -18,12 +18,21 @@ typedef struct{
 typedef struct{
 	Roll roll;
 	Player* p;
+	id space;
 } PlayerGameTurn;
+
+typedef struct{
+	Player* p;
+	int sale;
+} AuctionWinner;
+
+@protocol GameUIDelegate;
 
 @interface GameController : NSObject {
 	NSArray* players;
 	Player* currentPlayer;
 	GameBoard* board;
+	id<GameUIDelegate> delegate;
 }
 
 
@@ -35,5 +44,13 @@ typedef struct{
 @property(retain) GameBoard* board;
 @property(retain) NSArray* players;
 @property(retain,readonly) Player* currentPlayer;
+@property(assign) id<GameUIDelegate> delegate;
 
 @end
+
+@protocol GameUIDelegate
+-(BOOL)doesPlayer:(Player*)p wantProperty:(ImprovablePropertySpace*)prop;
+//assert return sale is  > 0 and p exists
+-(AuctionWinner) wellWhoWantsProperty:(ImprovablePropertySpace*)prop;
+@end
+

@@ -13,6 +13,7 @@
 -(id)initWithTitle:(NSString*)t{
 	if(self = [super init]){
 		[self setTitle:t];
+		spaceType = REGULAR;
 	}
 	return self;
 }

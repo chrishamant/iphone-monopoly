@@ -26,6 +26,7 @@
     [super viewDidLoad];
 	[rolled setText:[NSString stringWithFormat:@"You rolled a %d and %d",turn.roll.r1,turn.roll.r2]];
 	[landed setText:[[turn.p currentSpace] title]];
+	
 }
 
 - (void)didReceiveMemoryWarning {

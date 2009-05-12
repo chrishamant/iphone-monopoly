@@ -9,7 +9,6 @@
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
 			<integer value="14"/>
-			<integer value="22"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -45,17 +44,16 @@
 				<bool key="IBUIBouncesZoom">NO</bool>
 			</object>
 			<object class="IBUIImageView" id="531751574">
-				<reference key="NSNextResponder"/>
+				<nil key="NSNextResponder"/>
 				<int key="NSvFlags">292</int>
-				<string key="NSFrameSize">{500, 500}</string>
-				<reference key="NSSuperview"/>
+				<string key="NSFrameSize">{525, 500}</string>
 				<bool key="IBUIOpaque">NO</bool>
 				<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
-				<int key="IBUIContentMode">1</int>
+				<int key="IBUIContentMode">4</int>
 				<bool key="IBUIUserInteractionEnabled">NO</bool>
 				<object class="NSCustomResource" key="IBUIImage">
 					<string key="NSClassName">NSImage</string>
-					<string key="NSResourceName">Monopoly Board.jpg</string>
+					<string key="NSResourceName">newboardshrunk.png</string>
 				</object>
 			</object>
 		</object>
@@ -149,7 +147,7 @@
 					<string>UIResponder</string>
 					<string>{{483, 342}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{21, 322}, {500, 500}}</string>
+					<string>{{267, 157}, {525, 500}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 				</object>
 			</object>

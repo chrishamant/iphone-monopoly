@@ -11,6 +11,7 @@
 @synthesize board;
 @synthesize currentPlayer;
 @synthesize players;
+@synthesize delegate;
 
 -(Roll)rollDice{
 	Roll roll;
@@ -52,8 +53,8 @@
 	PlayerGameTurn turn;
 	turn.roll = r;
 	turn.p = currentPlayer;
-	
-	currentPlayer.currentSpace = [board getNewSpace:currentPlayer.currentSpace rolling:(r.r1+r.r2)];
+	turn.space = currentPlayer.currentSpace = [board getNewSpace:currentPlayer.currentSpace rolling:(r.r1+r.r2)];
+
 	
 	if(r.r1 != r.r2){
 		//did not roll doubles

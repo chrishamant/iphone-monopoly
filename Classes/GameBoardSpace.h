@@ -5,11 +5,21 @@
 //
 
 #import <Foundation/Foundation.h>
+
+typedef enum{
+	REGULAR,
+	RAILROAD,
+	UTILITY,
+	IMPROVABLE,
+	ACTION
+} BoardSpaceType;
+
 @class Player;
 @class GameBoard; //trust me compiler
 
 @interface GameBoardSpace : NSObject {
 	NSString* title;
+	BoardSpaceType spaceType;
 }
 
 -(void)performSpaceActionsWithBoard:(GameBoard*)board AndPlayer:(Player*)player;

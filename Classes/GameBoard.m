@@ -65,12 +65,6 @@
 	//TODO Figure out why this is crashing when these are released...
 }
 
--(id)getPropertySpaceFromDict:(NSDictionary*)dict{
-	id spaceToReturn;
-	spaceToReturn = 
-	[spaceToReturn autorelease];
-	return spaceToReturn;
-}
 
 - (void)dealloc {
     [super dealloc];

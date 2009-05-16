@@ -17,5 +17,5 @@
 
 -(GameBoardSpace*)getNewSpace:(GameBoardSpace*)fromSpace rolling:(int)numSpaces;
 -(void)getSpacesFromStore;
--(id)getPropertySpaceFromDict:(NSDictionary*)dict;
+
 @end

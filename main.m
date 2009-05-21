@@ -1,10 +1,8 @@
-//
-//  main.m
-//  Monopoly
-//
-//  Created by Chris Hamant on 4/5/09.
-//  Copyright __MyCompanyName__ 2009. All rights reserved.
-//
+/***
+main.m
+
+This is required main() method. Creates global autorelease pool and passes control to UIKit to continue loading application.
+*/
 
 #import <UIKit/UIKit.h>
 

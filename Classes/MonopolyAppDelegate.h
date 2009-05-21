@@ -1,8 +1,8 @@
-//
-//  MonopolyAppDelegate.h
-//  Monopoly
-//
-//
+/** 
+ MonopolyAppDelegate.m
+ 
+ Class to handle basic application lifecycle.
+ */
 
 @class GameStartupScreen;
 @class GameController;
@@ -16,8 +16,10 @@
     NSManagedObjectContext *managedObjectContext;	    
     NSPersistentStoreCoordinator *persistentStoreCoordinator;*/
 
+	/// Base UITabBarController - instantiated by Nib
 	IBOutlet UITabBarController *tab;
-    IBOutlet UIWindow *window;
+	/// Main window on iPhone - instantiated by Nib
+    IBOutlet UIWindow *window; 
 }
 
 #pragma mark methods

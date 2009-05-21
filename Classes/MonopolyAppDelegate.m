@@ -1,8 +1,8 @@
-//
-//  MonopolyAppDelegate.m
-//  Monopoly
-//
-//
+/***
+MonopolyAppDelegate.m
+
+ Class to handle basic application lifecycle.
+*/
 
 #import "MonopolyAppDelegate.h"
 
@@ -13,8 +13,6 @@
 #pragma mark Methods
 
 -(void)startMonopoly:(GameController*)aGame{
-	
-	
 	[tab setViewControllers:
 	 [NSArray arrayWithObjects:
 	  [[[GameScreen alloc] initWithGame:aGame] autorelease],
@@ -22,7 +20,6 @@
 	  [[[PlayersScreen alloc] initWithPlayers:aGame.players] autorelease],
 	  nil]];
 	[tab setSelectedIndex:0];
-	
 	[window addSubview:tab.view];
 }
 

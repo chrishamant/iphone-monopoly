@@ -17,6 +17,7 @@
 -(id)initWithTitle:(NSString*)name{
 	if(self = [super init]){
 		[self setTitle:name];
+		getOutofJailFree = NO;
 	}
 	return self;
 }

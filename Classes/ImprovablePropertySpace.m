@@ -22,6 +22,11 @@
 	return self;
 }
 
+-(int)calcRent{
+	//overidden
+	return 100;
+}
+
 - (void)dealloc {
     [super dealloc];
 	[color release];

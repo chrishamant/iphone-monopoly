@@ -28,3 +28,7 @@ typedef enum{
 @property(copy) NSString* title;
 
 @end
+
+@protocol ActionBoardSpace
+-(void)performActionWithPlayer:(Player*)p andBoard:(GameBoard*)board;
+@end

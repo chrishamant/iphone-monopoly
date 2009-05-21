@@ -21,7 +21,8 @@
 }
 
 -(int)calcRent{
-	return 100;
+	//should never be called. Shoule be shadowed by child classes
+	return 0;
 }
 
 - (void)dealloc {

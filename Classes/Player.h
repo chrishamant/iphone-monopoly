@@ -12,6 +12,7 @@
 	GameBoardSpace* currentSpace;
 	UIImage* token;
 	int cash;
+	BOOL getOutofJailFree;
 }
 @property (copy) NSString* title;
 @property int cash;

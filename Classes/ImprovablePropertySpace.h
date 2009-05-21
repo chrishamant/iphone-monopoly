@@ -4,7 +4,6 @@
 //
 //
 
-#import <Foundation/Foundation.h>
 #import "PropertyBoardSpace.h"
 
 @interface ImprovablePropertySpace : PropertyBoardSpace {

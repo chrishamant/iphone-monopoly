@@ -123,7 +123,7 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<real>0</real>
+		<string>Chance</string>
 		<key>spaceType</key>
 		<integer>4</integer>
 	</dict>

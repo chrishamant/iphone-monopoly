@@ -12,8 +12,8 @@
 @synthesize players;
 
 /**
- @param theplayers NSArray of players
- @return pointer to self
+ @param theplayers - NSArray of players
+ @return id - pointer to self
 */
 - (id)initWithPlayers:(NSArray*) theplayers {
     if (self = [super initWithNibName:@"PlayersScreen" bundle:nil]) {
@@ -32,15 +32,6 @@
 	self.view = nav.view;
 }
 
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -54,6 +45,7 @@
 }
 
 - (void)dealloc {
+	[players release];
     [super dealloc];
 }
 

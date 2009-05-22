@@ -1,26 +1,40 @@
-//
-//  GameBoard.m
-//  Monopoly
-//
-//
-
 #import "GameBoard.h"
 
 @implementation GameBoard
 @synthesize spaces;
 
+/**
+ Abstracts the concept of figuring out where on the board the player lands
+ 
+ @param fromSpace - Indicates starting location on board
+ @param numSpace - Number of spaces from 'fromSpace' to advance to
+ @return GameBoardSpace - Pointer to GameBoardSpace landed on
+ */
 -(GameBoardSpace*) getNewSpace:(GameBoardSpace*)fromSpace rolling:(int)numSpaces{
+	//should never have a negative number, although this method would still technically work
+	assert(numSpaces > 0);
 	NSUInteger currIndex = [spaces indexOfObject: fromSpace];
-	NSUInteger newIndex = (currIndex + numSpaces) % 39;
+	NSUInteger newIndex = (currIndex + numSpaces) % ([spaces count] - 1);
 	return [spaces objectAtIndex:newIndex];
 }
 
+/**
+ Class constructor
+ 
+ Calls [self getSpacesFromStore] to load up board from 'store'. Currently this is an XML file, could be anything though.
+ @return id - pointer to self
+ */
 -(id) init{
 	self = [super init];
 	[self getSpacesFromStore];
 	return self;
 }
 
+/**
+ Method to load and parse entries from XML store representing an array of GameBoardSpace(s).
+ This is pretty tightly coupled to the datastore and relies on some information present in the xml/plist
+ to know which GameBoardSpace instance to instantiate. 
+ */
 -(void)getSpacesFromStore{
 	NSString* plistPath = [[NSBundle mainBundle] pathForResource:@"MonopolySpaces" ofType:@"plist"];
 	NSArray* fromPlist = [NSArray arrayWithContentsOfFile:plistPath];
@@ -65,7 +79,11 @@
 	//TODO Figure out why this is crashing when these are released...
 }
 
-
+/**
+ Class destructor.
+ 
+ Releases all retained instance variables.
+ */
 - (void)dealloc {
     [super dealloc];
 	[spaces release];

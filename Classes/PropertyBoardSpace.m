@@ -26,8 +26,9 @@
 }
 
 - (void)dealloc {
-    [super dealloc];
 	[relatedSpaces release];
+	[owner release];
+    [super dealloc];
 }
 
 @end

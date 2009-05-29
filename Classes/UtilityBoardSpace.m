@@ -2,8 +2,6 @@
 //  UtilityBoardSpace.m
 //  Monopoly
 //
-//  Created by Chris Hamant on 5/20/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
 #import "UtilityBoardSpace.h"
@@ -13,14 +11,23 @@
 
 -(id)initFromDict:(NSDictionary*) dict{
 	if(self = [super initFromDict:dict]){
-		//doesn't really need any more customization for now
+		spaceType = UTILITY;
 	}
 	return self;
 }
 
--(int)calcRent{
-	//overloaded method
-	return 100;
+-(int)calcRentWithRoll:(int)roll{
+	//making the assumption there is only the one other utility...
+	if((owner == [[relatedSpaces objectAtIndex:0] owner])){
+		//both owned
+		return roll * 10;
+	}else if(owner){
+		return roll * 4;
+	}else{
+		//this should never be called without being owned
+		//shouldn't happen in a game
+		assert(0);
+	}
 }
 
 @end

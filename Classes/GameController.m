@@ -1,11 +1,16 @@
-//
-//  GameController.m
-//  Monopoly
-//
-//
-
 #import "GameController.h"
 
+/**
+ @class GameController
+ @file GameController.m
+ @author Chris Hamant
+ 
+ @brief Main control class for the game
+ 
+ This is the main controller class for the Game. It interacts with the user through a GameUIDelegate Protocol and
+ arbitrates interaction with the base model obects. 
+ 
+ */
 @implementation GameController
 
 @synthesize board;
@@ -48,14 +53,28 @@
 }
 
 -(PlayerGameTurn) playerTakeTurn{
+	
+	//player rolls dice
 	Roll r = [self rollDice];
 	
+	//state for turn I want to pass around
 	PlayerGameTurn turn;
 	turn.roll = r;
 	turn.p = currentPlayer;
-	turn.space = currentPlayer.currentSpace = [board getNewSpace:currentPlayer.currentSpace rolling:(r.r1+r.r2)];
-
 	
+	//saving starting space
+	id startSpace = currentPlayer.currentSpace;
+	
+	//hold on to roll sum
+	int rollsum = r.r1 + r.r2;
+	
+	//set new space
+	turn.space = currentPlayer.currentSpace = [board getNewSpace:currentPlayer.currentSpace rolling:rollsum];
+	
+	//testing to see if GO was passed 1st...
+	[self didPlayer:currentPlayer passGoFrom:startSpace rolling:rollsum];
+	
+	//advance current player
 	if(r.r1 != r.r2){
 		//did not roll doubles
 		NSUInteger pindex = [players indexOfObject:currentPlayer];
@@ -69,7 +88,68 @@
 		}
 	}//else player stays the same
 	
+	switch ([turn.space spaceType]) {
+		//purposeful fallthrough...
+		case RAILROAD:
+		case UTILITY:
+		case IMPROVABLE:
+			//isowned?
+			if([turn.space isOwned]){
+				[self payRent:turn];
+			}else{
+				//can + want to buy?
+				//buy
+				//auction
+			}
+			break;
+		case ACTION:
+			[turn.space performActionWithPlayer:turn.p andBoard:board];
+			break;
+		default:
+			//do nothing
+			break;
+	}
+	
 	return turn;
+}
+
+-(void)payRent:(PlayerGameTurn)t{
+	
+	//Calcuate Rent
+	int rent;
+	if([t.space spaceType] == UTILITY){
+		//in the UIdelegate this needs to be a blocking action
+		//that returns value
+		Roll r = [delegate getRollforOwnedUtility:t.space];
+		int roll = r.r1 + r.r2;
+		rent = [t.space calcRentWithRoll:roll];
+	}else{
+		rent = [t.space calcRent];
+	}	
+	
+	id player = t.p;
+	int coh = [player cash]; //cash on hand
+	if( coh >= rent){
+		[player setCash:(coh - rent)];
+		int otherCoh = [[t.space owner] cash];
+		[[t.space owner] setCash:(otherCoh + rent)];
+	} else{
+		//go into some kind of sell/buy/morgage state
+		//TODO!!
+		NSLog(@"SOME UNIMPLEMENTED STUFF");
+	}
+}
+
+-(void)didPlayer:(Player*)p passGoFrom:(id)space rolling:(int)r{
+	//did pass go?
+	id boardspaces = [board spaces];
+	int boardsize = [boardspaces count];
+	int startIndex = [boardspaces indexOfObject:space];
+	if((startIndex + r) > boardsize){
+		//passed GO
+		//collect $200
+		[p setCash:([p cash] + 200)];
+	}
 }
 
 @end

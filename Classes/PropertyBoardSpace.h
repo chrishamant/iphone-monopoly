@@ -15,6 +15,7 @@
 
 -(int)calcRent;
 -(id)initFromDict:(NSDictionary*) dict;
+-(BOOL)isOwned;
 
 @property int cost;
 @property(retain,nonatomic) NSArray* relatedSpaces;

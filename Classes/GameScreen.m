@@ -112,4 +112,9 @@
 	[currentTurn release];
 }
 
+-(Roll)getRollforOwnedUtility:(UtilityBoardSpace*)prop{
+	//should really get this from user... 
+	return [game rollDice];
+}
+
 @end

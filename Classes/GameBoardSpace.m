@@ -9,6 +9,7 @@
 
 @implementation GameBoardSpace
 @synthesize title;
+@synthesize spaceType;
 
 -(id)initWithTitle:(NSString*)t{
 	if(self = [super init]){

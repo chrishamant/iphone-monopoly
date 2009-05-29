@@ -2,7 +2,13 @@
 #import "GameBoardSpace.h"
 #import "PropertyBoardSpace.h"
 #import "ImprovablePropertySpace.h"
-
+#import "UtilityBoardSpace.h"
+#import "RailRoadBoardSpace.h"
+#import "CommunityChestBoardSpace.h"
+#import "ChanceBoardSpace.h"
+#import "IncomeTaxBoardSpace.h"
+#import "LuxuryTaxBoardSpace.h"
+#import "GoToJailSpace.h"
 
 /**
  @file GameBoard.h
@@ -23,5 +29,6 @@
 
 -(GameBoardSpace*)getNewSpace:(GameBoardSpace*)fromSpace rolling:(int)numSpaces;
 -(void)getSpacesFromStore;
+-(GameBoardSpace<ActionBoardSpace>*)buildActionSpaceFromDict:(NSDictionary*)dict;
 
 @end

@@ -2,8 +2,6 @@
 //  ImprovablePropertySpace.m
 //  Monopoly
 //
-//  Created by Chris Hamant on 4/28/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
 //
 
 #import "ImprovablePropertySpace.h"
@@ -11,20 +9,38 @@
 
 @implementation ImprovablePropertySpace
 @synthesize color;
+@synthesize rent;
 
 -(id)initFromDict:(NSDictionary*) dict{
 	if(self = [super initFromDict:dict]){
 		//[UIColor 
 		[self setColor:[dict objectForKey:@"color"]];
-		[self setRelatedSpaces:[dict objectForKey:@"related"]];
-		spaceType = IMPROVABLE; 
+		[self setRent:[dict objectForKey:@"rent"]];
+		houseCost = (int)[dict objectForKey:@"housecost"];
+		spaceType = IMPROVABLE;
+		numHouses = 0;
 	}
 	return self;
 }
 
 -(int)calcRent{
-	//overidden
-	return 100;
+	//this might be kind of bad cause I'm coupling really tightly to the array implementation...
+	int rentAmount = (int)[rent objectAtIndex:numHouses];
+	if([self isMonopoly] && (numHouses==0)){
+		//rent is doubled if player has monopoly on unimproved lots
+		rentAmount = rentAmount *2;
+	}
+	return rentAmount;
+}
+
+-(BOOL)isMonopoly{
+	BOOL test = YES;
+	for(id space in relatedSpaces){
+		if([space owner] != owner){
+			test = NO;
+		}
+	}
+	return test;
 }
 
 - (void)dealloc {

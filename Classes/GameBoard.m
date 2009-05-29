@@ -47,24 +47,20 @@
 		int spaceType = [[temp objectForKey:@"spaceType"] intValue];
 		switch (spaceType) {
 			case REGULAR:
-				//regular space (inert)
 				[thespaces addObject:[[[GameBoardSpace alloc] initWithTitle:[temp objectForKey:@"title"]] autorelease]];
 				break;
 			case RAILROAD:
-				//railroad
-				[thespaces addObject: [[[PropertyBoardSpace alloc] initFromDict:temp] autorelease]];
+				[thespaces addObject: [[[RailRoadBoardSpace alloc] initFromDict:temp] autorelease]];
 				break;
 			case UTILITY:
-				//utility
 				[thespaces addObject: [[[PropertyBoardSpace alloc] initFromDict:temp] autorelease]];
 				break;
 			case IMPROVABLE:
-				//improvable
 				[thespaces addObject: [[[ImprovablePropertySpace alloc] initFromDict:temp] autorelease]];
 				break;
 			case ACTION:
 				//action space
-				[thespaces addObject: [[[GameBoardSpace alloc] initWithTitle:[temp objectForKey:@"title"]] autorelease]];
+				[thespaces addObject: [self buildActionSpaceFromDict:temp]];
 				break;
 			default:
 				//this should never happen
@@ -77,6 +73,34 @@
 	[plistPath release]; 
 	[thespaces release];*/
 	//TODO Figure out why this is crashing when these are released...
+}
+
+/**
+ Method to build the proper 'Action' Space from the space's title.
+ This tightly couples the space's name to this method... but at least it doesn't care about the order on the board.
+ @param dictionary from the .plist
+ @return proper GameBoardSpace class conforming to ActionBoardSpace protocol
+ */
+-(GameBoardSpace<ActionBoardSpace>*)buildActionSpaceFromDict:(NSDictionary*)dict{
+	NSString* title = [dict objectForKey:@"title"];
+	GameBoardSpace<ActionBoardSpace>* space;
+	space = nil; ///setting to nil... this might cause a bug if none of the following tests pass
+	if([title isEqualToString:@"Community Chest"]){
+		space = [[CommunityChestBoardSpace alloc] initWithTitle:title];
+	}else if([title isEqualToString:@"Income Tax"]){
+		space = [[IncomeTaxBoardSpace alloc] initWithTitle:title];
+	}else if([title isEqualToString:@"Luxury Tax"]){
+		space = [[LuxuryTaxBoardSpace alloc] initWithTitle:title];
+	}else if([title isEqualToString:@"Chance"]){
+		space = [[ChanceBoardSpace alloc] initWithTitle:title];
+	}else if([title isEqualToString:@"Go to Jail"]){
+		space = [[GoToJailSpace alloc] initWithTitle:title];
+	}else{
+		///hoping this never happens
+		assert(0);
+	}
+	[space autorelease];
+	return space;
 }
 
 /**

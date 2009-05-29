@@ -21,4 +21,5 @@
 
 -(id)initWithTitle:(NSString*)name;
 
+-(void)payToBank:(int)amount;
 @end

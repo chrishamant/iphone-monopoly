@@ -11,5 +11,6 @@
 }
 
 -(id)initFromDict:(NSDictionary*) dict;
+-(int)calcRentWithRoll:(int)roll;
 
 @end

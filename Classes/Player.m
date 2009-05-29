@@ -22,6 +22,10 @@
 	return self;
 }
 
+-(void)payToBank:(int)amount{
+	NSLog(@"paying %x to bank.",amount);
+}
+
 - (void)dealloc {
     [super dealloc];
 	[title release];

@@ -26,7 +26,7 @@ typedef enum{
 -(id)initWithTitle:(NSString*)t;
 
 @property(copy) NSString* title;
-
+@property BoardSpaceType spaceType;
 @end
 
 @protocol ActionBoardSpace

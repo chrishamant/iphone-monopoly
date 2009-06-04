@@ -1,5 +1,3 @@
-#import "GameController.h"
-
 /**
  @class GameController
  @file GameController.m
@@ -7,10 +5,13 @@
  
  @brief Main control class for the game
  
- This is the main controller class for the Game. It interacts with the user through a GameUIDelegate Protocol and
+ This is the main controller class for the Game. 
+ It interacts with the user through a GameUIDelegate Protocol and
  arbitrates interaction with the base model obects. 
  
  */
+
+#import "GameController.h"
 @implementation GameController
 
 @synthesize board;

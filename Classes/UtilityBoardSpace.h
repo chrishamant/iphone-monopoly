@@ -1,8 +1,10 @@
-//
-//  UtilityBoardSpace.h
-//  Monopoly
-//
-//
+/**
+ @class UtilityBoardSpace
+ @file UtilityBoardSpace.h
+ @author Chris Hamant
+ 
+ Class used to represent the two Utility spaces on a Monopoly Board
+ */
 
 #import "PropertyBoardSpace.h"
 

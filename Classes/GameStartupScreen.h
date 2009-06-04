@@ -1,8 +1,12 @@
-//
-//  GameStartupScreen.h
-//  Monopoly
-//
-//
+/**
+ @class GameStartupScreen
+ @file GameStartupScreen.h
+ @author Chris Hamant
+ 
+ @brief Initial Game Screen
+ 
+ Screen that exists upon inital load
+ */
 
 #import "MonopolyAppDelegate.h"
 #import <UIKit/UIKit.h>

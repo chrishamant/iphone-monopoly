@@ -1,10 +1,10 @@
-//
-//  PlayerScreenDetail.h
-//  Monopoly
-//
-//  Created by Chris Hamant on 5/2/09.
-//  Copyright 2009 __MyCompanyName__. All rights reserved.
-//
+/**
+ @class PlayerScreenDetail
+ @file PlayerScreenDetail.h
+ @author Chris Hamant
+ 
+ View that displays more detailed information about users
+ */
 
 #import <UIKit/UIKit.h>
 @class Player;

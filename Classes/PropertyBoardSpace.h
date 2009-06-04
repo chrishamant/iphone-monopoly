@@ -1,8 +1,10 @@
-//
-//  PropertyBoardSpace.h
-//  Monopoly
-//
-//
+/**
+ @class PropertyBoardSpace
+ @file PropertyBoardSpace.h
+ @author Chris Hamant
+ 
+ 'Abstract' Base class for spaces that could be 'owned'
+ */
 
 #import "GameBoardSpace.h"
 @class Player;

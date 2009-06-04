@@ -1,9 +1,12 @@
-//
-//  BoardScreen.m
-//  Monopoly
-//
-//  Created by Chris Hamant on 4/24/09.
-//
+/**
+ @file BoardScreen.m
+ @author Chris Hamant
+ @class PlayersScreen
+ 
+ @brief Control class for BoardScreen.xib
+ Class used to control and interact with the BoardScreen.xib GUI interface.
+ 
+ */
 
 #import "BoardScreen.h"
 
@@ -11,7 +14,13 @@
 @implementation BoardScreen
 
 
- // The designated initializer.  Override if you create the controller programmatically and want to perform customization that is not appropriate for viewDidLoad.
+/**
+ Constructor
+ 
+ @param nibNameOrNil - string name of nib to load
+ @param nibBundleOrNil - settings bundle/ shared state
+ @return pointer to self
+ */
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
     if (self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil]) {
 		[self setTitle:@"Board"];
@@ -19,9 +28,9 @@
     return self;
 }
 
-
-
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+/**
+ Method triggered when the screen is displayed to the user
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[scrollview setContentSize:CGSizeMake(board.frame.size.width, board.frame.size.height)];
@@ -30,15 +39,9 @@
 	[scrollview addSubview:board];
 }
 
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
+/**
+ Method triggered when the device runs out of memory
+ */
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -46,28 +49,27 @@
 	// Release any cached data, images, etc that aren't in use.
 }
 
+/**
+ Method triggered when the screen will disappear
+ */
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 }
 
-
+/**
+ Destructor
+ */
 - (void)dealloc {
     [super dealloc];
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"begin!");
-}
-
-- (void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"middle!");
-}
-
-- (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
-	NSLog(@"end!");
-}
-
+#pragma mark UIScrollViewDelegate protocol methods
+/**
+ Method called by the scroll view when user 'pinches' the enclosed view
+ @param pointer to UIScrollView that  called this method
+ @return pointer to UIView subclass that should be zoomed
+ */
 -(UIView*)viewForZoomingInScrollView:(UIScrollView*)scroll{
 	return board;
 }

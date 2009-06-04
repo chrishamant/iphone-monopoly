@@ -1,8 +1,10 @@
-//
-//  ChanceBoardSpace.h
-//  Monopoly
-//
-//
+/**
+ @class ChanceBoardSpace
+ @file ChanceBoardSpace.h
+ @author Chris Hamant
+ 
+ Represents the group of Chance Spaces on a Monopoly GameBoard
+ */
 
 #import "GameBoardSpace.h"
 

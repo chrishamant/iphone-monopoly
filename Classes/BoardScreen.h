@@ -1,10 +1,12 @@
-//
-//  BoardScreen.h
-//  Monopoly
-//
-//  Created by Chris Hamant on 4/24/09.
-//
-
+/**
+ @file BoardScreen.h
+ @author Chris Hamant
+ @class PlayersScreen
+ 
+ @brief Control class for BoardScreen.xib
+ Class used to control and interact with the BoardScreen.xib GUI interface.
+ 
+ */
 #import <UIKit/UIKit.h>
 
 

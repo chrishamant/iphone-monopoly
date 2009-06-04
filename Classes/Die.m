@@ -1,8 +1,8 @@
-//
-//  Die.m
-//  Monopoly
-//
-//
+/**
+ @file Die.m
+ @class Die
+ Simple class to represent a single Die. Only has single static method
+ */
 
 #import "Die.h"
 

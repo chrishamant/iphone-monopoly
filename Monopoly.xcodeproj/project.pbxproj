@@ -142,8 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				83B741460F8C31380038FBB2 /* View */,
-				839CFC070F89D93A001505FD /* GuiControl */,
-				83D351920F92C723000EAB0C /* ModelControl */,
+				83BAF1020FD716C900260217 /* Control */,
 				839CFB610F89CC01001505FD /* Model */,
 				1D3623240D0F684500981E51 /* MonopolyAppDelegate.h */,
 				1D3623250D0F684500981E51 /* MonopolyAppDelegate.m */,
@@ -255,6 +254,15 @@
 				83E807220FAFF4DC00194F55 /* GameTurn.xib */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		83BAF1020FD716C900260217 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				839CFC070F89D93A001505FD /* GuiControl */,
+				83D351920F92C723000EAB0C /* ModelControl */,
+			);
+			name = Control;
 			sourceTree = "<group>";
 		};
 		83D351920F92C723000EAB0C /* ModelControl */ = {

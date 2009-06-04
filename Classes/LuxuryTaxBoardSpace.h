@@ -1,8 +1,10 @@
-//
-//  LuxuryTaxBoardSpace.h
-//  Monopoly
-//
-//
+/**
+ @class LuxuryTaxBoardSpace
+ @file LuxuryTaxBoardSpace.h
+ @author Chris Hamant
+ 
+Represents the single 'Luxury Tax' Space on a Monopoly GameBoard
+ */
 
 #import "GameBoardSpace.h"
 #import "Player.h"

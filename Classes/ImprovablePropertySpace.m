@@ -1,8 +1,10 @@
-//
-//  ImprovablePropertySpace.m
-//  Monopoly
-//
-//
+/**
+ @class ImprovablePropertySpace
+ @file ImprovablePropertySpace.m
+ @author Chris Hamant
+ 
+ Class used to represent a 'color-group' space on a Monopoly GameBoard
+ */
 
 #import "ImprovablePropertySpace.h"
 
@@ -11,6 +13,11 @@
 @synthesize color;
 @synthesize rent;
 
+/**
+ Constructor
+ @param dict - dictionary used in initializing class
+ @return point to self
+ */
 -(id)initFromDict:(NSDictionary*) dict{
 	if(self = [super initFromDict:dict]){
 		//[UIColor 
@@ -23,6 +30,10 @@
 	return self;
 }
 
+/**
+ Method to calculate current rent
+ @return integer value or current rent
+ */
 -(int)calcRent{
 	//this might be kind of bad cause I'm coupling really tightly to the array implementation...
 	int rentAmount = (int)[rent objectAtIndex:numHouses];
@@ -33,6 +44,10 @@
 	return rentAmount;
 }
 
+/**
+ Method indicating whether property is a Monopoly
+ @return BOOL indicating whether property is a Monopoly
+ */
 -(BOOL)isMonopoly{
 	BOOL test = YES;
 	for(id space in relatedSpaces){
@@ -43,6 +58,9 @@
 	return test;
 }
 
+/**
+ Destructor
+ */
 - (void)dealloc {
     [super dealloc];
 	[color release];

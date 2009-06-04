@@ -1,8 +1,10 @@
-//
-//  PreGameSettings.h
-//  Monopoly
-//
-//
+/**
+ @class PreGameSettings
+ @file PreGameSettings.h
+ @author Chris Hamant
+ 
+ Controller class for view that lets users set their name/token before game starts.
+ */
 
 #import <UIKit/UIKit.h>
 #import "Player.h"

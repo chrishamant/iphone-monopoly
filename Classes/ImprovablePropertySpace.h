@@ -1,8 +1,10 @@
-//
-//  ImprovablePropertySpace.h
-//  Monopoly
-//
-//
+/**
+ @class ImprovablePropertySpace
+ @file ImprovablePropertySpace.h
+ @author Chris Hamant
+ 
+ Class used to represent a 'color-group' space on a Monopoly GameBoard
+ */
 
 #import "PropertyBoardSpace.h"
 

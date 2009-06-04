@@ -1,8 +1,12 @@
-//
-//  GameScreen.m
-//  Monopoly
-//
-//
+/**
+ @class GameScreen
+ @file GameScreen.m
+ @author Chris Hamant
+ 
+ @brief GUI Screen controller
+ 
+ Screen that controls the main game state throughout the lifecycle
+ */
 
 #import "GameScreen.h"
 @class Player;
@@ -11,6 +15,11 @@
 
 @synthesize game;
 
+/**
+ Constructor
+ @param point to initialized game with existing players
+ @return pointer to self
+ */
 -(id)initWithGame:(GameController*)g{
 	if (self = [super initWithNibName:@"GameScreen" bundle:nil]) {
         [self setTitle:@"Game"];
@@ -21,21 +30,17 @@
 }
 
 
-// Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
+/**
+ Method triggered when the screen is displayed to the user
+ */
 - (void)viewDidLoad {
     [super viewDidLoad];
 	[self updateDisplay];
 }
 
-
-/*
-// Override to allow orientations other than the default portrait orientation.
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    // Return YES for supported orientations
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-*/
-
+/**
+ Method triggered when the device runs out of memory
+ */
 - (void)didReceiveMemoryWarning {
 	// Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
@@ -43,12 +48,17 @@
 	// Release any cached data, images, etc that aren't in use.
 }
 
+/**
+ Method triggered when the screen will disappear
+ */
 - (void)viewDidUnload {
 	// Release any retained subviews of the main view.
 	// e.g. self.myOutlet = nil;
 }
 
-
+/**
+ Destructor
+ */
 - (void)dealloc {
     [super dealloc];
 	[game release];
@@ -82,6 +92,10 @@
 
 #pragma mark Implementation methods
 
+/**
+ Method that is triggered when current player indicates he is rolling for his turn
+ @param pointer to object that triggered this action
+ */
 -(void)rollAction:(id)sender{
 	PlayerGameTurn turn = [game playerTakeTurn];
 	currentTurn = [[GameTurn alloc] initWithTurn:turn];
@@ -91,6 +105,9 @@
 	[self.view addSubview:currentTurn.view];
 }
 
+/**
+ Method used to refresh the display
+ */
 -(void)updateDisplay{
 	Player* p = [game currentPlayer];
 	[playerName setText:[p title]];
@@ -105,6 +122,10 @@
 }
 
 #pragma mark GameTurnDelegate Protocol
+/**
+ Closes the view controller after GameTurn triggered done: method
+ @param pointer to GameTurn that called this method
+ */
 - (void)turnComplete:(GameTurn*)controller{
 	[self updateDisplay];
 	[controller.view removeFromSuperview];
@@ -112,6 +133,10 @@
 	[currentTurn release];
 }
 
+/**
+ @param UtilityBoardSpace that needs the roll
+ @return Roll struct with dice roll
+ */
 -(Roll)getRollforOwnedUtility:(UtilityBoardSpace*)prop{
 	//should really get this from user... 
 	return [game rollDice];

@@ -23,8 +23,10 @@
 -(id)initWithGame:(GameController*)g{
 	if (self = [super initWithNibName:@"GameScreen" bundle:nil]) {
         [self setTitle:@"Game"];
+		[self.tabBarItem setImage: [UIImage imageNamed:@"die.png"]];
 		[g retain];
 		game = g;
+		[game setDelegate:self];
     }
     return self;
 }
@@ -97,12 +99,14 @@
  @param pointer to object that triggered this action
  */
 -(void)rollAction:(id)sender{
-	PlayerGameTurn turn = [game playerTakeTurn];
-	currentTurn = [[GameTurn alloc] initWithTurn:turn];
-	currentTurn.delegate = self;
+	//PlayerGameTurn turn = [game playerTakeTurn];
+	[game playerTakeTurn];
+	//currentTurn = [[GameTurn alloc] initWithTurn:turn];
+	//currentTurn.delegate = self;
 	//currentTurn.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
 	//[self presentModalViewController:currentTurn animated:YES];
-	[self.view addSubview:currentTurn.view];
+	//[self.view addSubview:currentTurn.view];
+	[self updateDisplay];
 }
 
 /**
@@ -114,11 +118,32 @@
 	id sp = [p currentSpace];
 	[currentSpace setText:[sp title]];
 	if([sp isKindOfClass:[PropertyBoardSpace class]]){
-		[rent setText:[NSString stringWithFormat:@"Rent $%d",[sp calcRent]]];
+		if([sp isOwned]){
+			[rent setText:[NSString stringWithFormat:@"Rent $%d",[sp calcRent]]];
+		}else{
+			[rent setText:@"unowned"];
+		}
 	}else{
-		[rent setText:@""];
+		[rent setText:@"n/a"];
 	}
 	[self.view setNeedsDisplay];
+}
+
+#pragma mark GameUIDelegate stuff
+
+/**
+ @param p - Player in question
+ @param prop - Property in questino
+ */
+-(void)doesPlayer:(Player*)p wantProperty:(PropertyBoardSpace*)prop{
+	UIActionSheet *actionSheet = [[UIActionSheet alloc] 
+								  initWithTitle:[NSString stringWithFormat:@"%@, do you want to purchase %@?",[p title],[prop title]] 
+								  delegate:self 
+								  cancelButtonTitle:@"No" 
+								  destructiveButtonTitle:@"Yes" 
+								  otherButtonTitles:nil];
+	[actionSheet showInView:self.tabBarController.view];
+	[actionSheet release];
 }
 
 #pragma mark GameTurnDelegate Protocol
@@ -140,6 +165,36 @@
 -(Roll)getRollforOwnedUtility:(UtilityBoardSpace*)prop{
 	//should really get this from user... 
 	return [game rollDice];
+}
+
+/**
+ @param prop - Property in question
+ @return AuctionWinner struct with info who won
+ */
+-(AuctionWinner) wellWhoWantsProperty:(PropertyBoardSpace*)prop{
+	AuctionWinner winner;
+	return winner;
+}
+
+-(void)updateRollInfo:(PlayerGameTurn)t{
+	[landedSpaced setText:[NSString stringWithFormat:@"Landed on %@",[t.space title]]];
+	[rolled setText:[NSString stringWithFormat:@"Rolled a %i and %i",t.roll.r1, t.roll.r2]];
+}
+
+#pragma mark UIActionSheetDelegate
+/**
+ Method to determine users response
+ @param actionSheet - the actionsheet in question
+ @paran buttonIndex - which button was clicked
+ */
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
+	BOOL result;
+	if(buttonIndex == 0){
+		result = YES;
+	}else{
+		result = NO;
+	}
+	[game responseToPurchaseReq:result];
 }
 
 @end

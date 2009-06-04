@@ -57,6 +57,7 @@ typedef struct{
 -(PlayerGameTurn)playerTakeTurn;
 -(void)payRent:(PlayerGameTurn)turn;
 -(void)didPlayer:(Player*)currentPlayer passGoFrom:(id)space rolling:(int)r;
+-(void)responseToPurchaseReq:(BOOL)res;
 
 @property(retain) GameBoard* board;
 @property(retain) NSArray* players;
@@ -66,10 +67,14 @@ typedef struct{
 @end
 
 @protocol GameUIDelegate
--(BOOL)doesPlayer:(Player*)p wantProperty:(ImprovablePropertySpace*)prop;
+-(void)doesPlayer:(Player*)p wantProperty:(PropertyBoardSpace*)prop;
+
 //assert return sale is  > 0 and p exists
--(AuctionWinner) wellWhoWantsProperty:(ImprovablePropertySpace*)prop;
+-(AuctionWinner) wellWhoWantsProperty:(PropertyBoardSpace*)prop;
+
 //player has landed on owned utility
 -(Roll)getRollforOwnedUtility:(UtilityBoardSpace*)prop;
+-(void)updateRollInfo:(PlayerGameTurn)t;
+
 @end
 

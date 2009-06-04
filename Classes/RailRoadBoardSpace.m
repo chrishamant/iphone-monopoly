@@ -49,9 +49,9 @@
 		numOwned++;
 	}
 	for(id space in relatedSpaces){
-		/*if([space owner]){
+		if([space owner]){
 			numOwned++;
-		}*/
+		}
 	}
 	return numOwned;
 }

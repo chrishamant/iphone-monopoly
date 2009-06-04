@@ -85,14 +85,14 @@
 	
 	//hold on to roll sum
 	int rollsum = r.r1 + r.r2;
-	
+	NSLog(@"%@ Rolled %i",[currentPlayer title],rollsum);
 	//set new space
 	turn.space = currentPlayer.currentSpace = [board getNewSpace:currentPlayer.currentSpace rolling:rollsum];
-	
+	NSLog(@"%@ was on %@ and landed on %@",[currentPlayer title],[startSpace title],[turn.space title]);
 	//testing to see if GO was passed 1st...
 	[self didPlayer:currentPlayer passGoFrom:startSpace rolling:rollsum];
-	
-	//advance current player
+	[delegate updateRollInfo:turn];
+	//advance current player first as they might be headed to jail
 	if(r.r1 != r.r2){
 		//did not roll doubles
 		NSUInteger pindex = [players indexOfObject:currentPlayer];
@@ -104,7 +104,10 @@
 			//next player
 			currentPlayer = [players objectAtIndex:pindex];
 		}
-	}//else player stays the same
+	}else{
+		NSLog(@"Player rolled doubles");
+	}
+	
 	
 	switch ([turn.space spaceType]) {
 		//purposeful fallthrough...
@@ -112,23 +115,45 @@
 		case UTILITY:
 		case IMPROVABLE:
 			//isowned?
+			NSLog(@"Landed on an Property Space");
 			if([turn.space isOwned]){
+				NSLog(@"Landed on a space that was owned.");
 				[self payRent:turn];
 			}else{
 				//can + want to buy?
-				//buy
-				//auction
+				int cashonhand = [turn.p cash];
+				if(cashonhand > [turn.space cost]){
+					//can afford
+					[delegate doesPlayer:turn.p wantProperty:turn.space];
+				}else{
+					//can't buy/afford
+					NSLog(@"Can't Afford property");
+				}
 			}
 			break;
 		case ACTION:
+			NSLog(@"Landed on an 'Action' space");
 			[turn.space performActionWithPlayer:turn.p andBoard:board];
 			break;
 		default:
 			//do nothing
+			NSLog(@"Landed on Neutral Space");
 			break;
 	}
 	
+	NSLog(@"It is now %@'s turn.",[currentPlayer title]);
 	return turn;
+}
+
+-(void)responseToPurchaseReq:(BOOL)res{
+	if(res){
+		//wants to buy
+		NSLog(@"Wants to buy");
+	}else {
+		//doesn't want to buy
+		NSLog(@"Doesn't want to buy");
+		//auction
+	}
 }
 
 /**
@@ -174,8 +199,7 @@
 	int boardsize = [boardspaces count];
 	int startIndex = [boardspaces indexOfObject:space];
 	if((startIndex + r) > boardsize){
-		//passed GO
-		//collect $200
+		NSLog(@"passed Go, collect $200");
 		[p setCash:([p cash] + 200)];
 	}
 }

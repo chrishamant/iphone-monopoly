@@ -23,6 +23,7 @@
     if (self = [super initWithNibName:@"PlayersScreen" bundle:nil]) {
 		[self setPlayers:theplayers];
 		[self setTitle:@"Players"];
+		[self.tabBarItem setImage: [UIImage imageNamed:@"person.png"]];
     }
     return self;
 }

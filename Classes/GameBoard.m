@@ -53,7 +53,7 @@
 				[thespaces addObject: [[[RailRoadBoardSpace alloc] initFromDict:temp] autorelease]];
 				break;
 			case UTILITY:
-				[thespaces addObject: [[[PropertyBoardSpace alloc] initFromDict:temp] autorelease]];
+				[thespaces addObject: [[[UtilityBoardSpace alloc] initFromDict:temp] autorelease]];
 				break;
 			case IMPROVABLE:
 				[thespaces addObject: [[[ImprovablePropertySpace alloc] initFromDict:temp] autorelease]];
@@ -68,6 +68,24 @@
 				break;
 		}
 	}
+	//iterate through all the spaces and process related spaces
+	//if space is a type of property space build a temp array from the indexes and setRelatedSpaces on each one
+	NSMutableArray* related = [NSMutableArray arrayWithCapacity:2];
+	for(id space in thespaces){
+		if([space isKindOfClass:[PropertyBoardSpace class]]){
+			for(id index in [space relatedSpaces]){
+				[related addObject:[thespaces objectAtIndex:[index intValue]]];
+			}
+
+			//set the new hotness. Convert to NSArray so its immutable... 
+			[space setRelatedSpaces:[NSArray arrayWithArray:related]];
+
+			//make a new one for next customer
+			related = [NSMutableArray arrayWithCapacity:2];
+		}
+		
+	}
+	
 	[self setSpaces:[NSArray arrayWithArray:thespaces]];
 	/*[fromPlist release];
 	[plistPath release]; 

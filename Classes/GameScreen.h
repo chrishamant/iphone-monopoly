@@ -11,11 +11,13 @@
 #import "GameController.h"
 #import "GameTurn.h"
 
-@interface GameScreen : UIViewController<GameTurnDelegate> {
+@interface GameScreen : UIViewController<GameTurnDelegate , GameUIDelegate, UIActionSheetDelegate> {
 	GameController* game;
 	IBOutlet UILabel* playerName;
 	IBOutlet UILabel* currentSpace;
 	IBOutlet UILabel* rent;
+	IBOutlet UILabel* rolled;
+	IBOutlet UILabel* landedSpaced;
 	GameTurn *currentTurn;
 }
 

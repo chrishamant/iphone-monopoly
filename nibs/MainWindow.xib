@@ -2,13 +2,13 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.03">
 	<data>
 		<int key="IBDocument.SystemTarget">768</int>
-		<string key="IBDocument.SystemVersion">9G55</string>
+		<string key="IBDocument.SystemVersion">9J61</string>
 		<string key="IBDocument.InterfaceBuilderVersion">677</string>
-		<string key="IBDocument.AppKitVersion">949.43</string>
+		<string key="IBDocument.AppKitVersion">949.46</string>
 		<string key="IBDocument.HIToolboxVersion">353.00</string>
 		<object class="NSMutableArray" key="IBDocument.EditedObjectIDs">
 			<bool key="EncodedWithXMLCoder">YES</bool>
-			<integer value="12"/>
+			<integer value="69"/>
 		</object>
 		<object class="NSArray" key="IBDocument.PluginDependencies">
 			<bool key="EncodedWithXMLCoder">YES</bool>
@@ -45,7 +45,7 @@
 							<object class="IBUIImageView" id="883419116">
 								<reference key="NSNextResponder" ref="57734028"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrameSize">{320, 460}</string>
+								<string key="NSFrame">{{-1, 0}, {320, 460}}</string>
 								<reference key="NSSuperview" ref="57734028"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -53,7 +53,7 @@
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<object class="NSCustomResource" key="IBUIImage">
 									<string key="NSClassName">NSImage</string>
-									<string key="NSResourceName">background.jpg</string>
+									<string key="NSResourceName">monopoly-man.jpg</string>
 								</object>
 							</object>
 							<object class="IBUIButton" id="797547426">
@@ -76,7 +76,6 @@
 								</object>
 								<int key="IBUIButtonType">1</int>
 								<bool key="IBUIReversesTitleShadowWhenHighlighted">YES</bool>
-								<bool key="IBUIShowsTouchWhenHighlighted">YES</bool>
 								<string key="IBUIHighlightedTitle">Start Game</string>
 								<string key="IBUIDisabledTitle">Start Game</string>
 								<string key="IBUISelectedTitle">Start Game</string>
@@ -110,7 +109,6 @@
 								<reference key="IBUIFont" ref="312776347"/>
 								<int key="IBUIButtonType">1</int>
 								<bool key="IBUIReversesTitleShadowWhenHighlighted">YES</bool>
-								<bool key="IBUIShowsTouchWhenHighlighted">YES</bool>
 								<string key="IBUIHighlightedTitle">Player Options</string>
 								<string key="IBUIDisabledTitle">Player Options</string>
 								<string key="IBUISelectedTitle">Player Options</string>
@@ -125,7 +123,7 @@
 							<object class="IBUILabel" id="99680521">
 								<reference key="NSNextResponder" ref="57734028"/>
 								<int key="NSvFlags">292</int>
-								<string key="NSFrame">{{60, 122}, {198, 48}}</string>
+								<string key="NSFrame">{{60, 39}, {198, 48}}</string>
 								<reference key="NSSuperview" ref="57734028"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -136,7 +134,10 @@
 									<double key="NSSize">3.600000e+01</double>
 									<int key="NSfFlags">16</int>
 								</object>
-								<reference key="IBUITextColor" ref="646094869"/>
+								<object class="NSColor" key="IBUITextColor" id="901447085">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MCAwIDAAA</bytes>
+								</object>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
@@ -184,10 +185,7 @@
 								<bool key="IBUIClipsSubviews">YES</bool>
 								<bool key="IBUIUserInteractionEnabled">NO</bool>
 								<string key="IBUIText">c</string>
-								<object class="NSColor" key="IBUITextColor" id="901447085">
-									<int key="NSColorSpace">1</int>
-									<bytes key="NSRGB">MCAwIDAAA</bytes>
-								</object>
+								<reference key="IBUITextColor" ref="901447085"/>
 								<nil key="IBUIHighlightedColor"/>
 								<int key="IBUIBaselineAdjustment">1</int>
 								<float key="IBUIMinimumFontSize">1.000000e+01</float>
@@ -396,8 +394,8 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<reference ref="797547426"/>
 							<reference ref="449088834"/>
-							<reference ref="883419116"/>
 							<reference ref="99680521"/>
+							<reference ref="883419116"/>
 						</object>
 						<reference key="parent" ref="117978783"/>
 					</object>
@@ -573,7 +571,7 @@
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
-					<string>{{379, 317}, {320, 480}}</string>
+					<string>{{402, 326}, {320, 480}}</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>MonopolyAppDelegate</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>

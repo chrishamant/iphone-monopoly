@@ -23,6 +23,14 @@
 }
 
 /**
+ This is a little slop added cause there is a bug in my design
+ @return int - rent
+ */
+-(int)calcRent{
+	return [self calcRentWithRoll:10];
+}
+
+/**
  Method to determin rent for Utility based off of provided dice roll
  @param roll - sum of dice roll used to calc rent
  @return int - Sum of Rent

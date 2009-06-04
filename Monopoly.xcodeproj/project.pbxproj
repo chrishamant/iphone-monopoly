@@ -34,7 +34,15 @@
 		839EB7F50FA18335005CB448 /* BoardScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EB7F30FA18335005CB448 /* BoardScreen.xib */; };
 		839EB7FC0FA18442005CB448 /* PlayersScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 839EB7FA0FA18442005CB448 /* PlayersScreen.m */; };
 		839EB7FD0FA18442005CB448 /* PlayersScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839EB7FB0FA18442005CB448 /* PlayersScreen.xib */; };
-		839EB9190FA19404005CB448 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 839EB9180FA19404005CB448 /* Default.png */; };
+		83A7ED260FD7BDAC00908502 /* person.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A7ED250FD7BDAC00908502 /* person.png */; };
+		83A7ED280FD7BEBB00908502 /* die.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A7ED270FD7BEBB00908502 /* die.png */; };
+		83A7ED600FD7C11400908502 /* bullettrain.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A7ED5A0FD7C11400908502 /* bullettrain.png */; };
+		83A7ED610FD7C11400908502 /* car.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A7ED5B0FD7C11400908502 /* car.png */; };
+		83A7ED620FD7C11400908502 /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A7ED5C0FD7C11400908502 /* dog.png */; };
+		83A7ED630FD7C11400908502 /* hat.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A7ED5D0FD7C11400908502 /* hat.png */; };
+		83A7ED640FD7C11400908502 /* horse.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A7ED5E0FD7C11400908502 /* horse.png */; };
+		83A7ED650FD7C11400908502 /* thimble.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A7ED5F0FD7C11400908502 /* thimble.png */; };
+		83A7ED7F0FD7C36700908502 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 83A7ED7E0FD7C36700908502 /* Default.png */; };
 		83BA2E050F9CFB12005A76F1 /* GameStartupScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */; };
 		83CABAFE0FCF761E004E80CD /* RailRoadBoardSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CABAFD0FCF761E004E80CD /* RailRoadBoardSpace.m */; };
 		83CABB0E0FCF7AF6004E80CD /* GoToJailSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 83CABB0D0FCF7AF6004E80CD /* GoToJailSpace.m */; };
@@ -92,7 +100,15 @@
 		839EB7F90FA18442005CB448 /* PlayersScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayersScreen.h; sourceTree = "<group>"; };
 		839EB7FA0FA18442005CB448 /* PlayersScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayersScreen.m; sourceTree = "<group>"; };
 		839EB7FB0FA18442005CB448 /* PlayersScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayersScreen.xib; sourceTree = "<group>"; };
-		839EB9180FA19404005CB448 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		83A7ED250FD7BDAC00908502 /* person.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = person.png; path = ../../../Desktop/person.png; sourceTree = SOURCE_ROOT; };
+		83A7ED270FD7BEBB00908502 /* die.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = die.png; path = ../../../Desktop/die.png; sourceTree = SOURCE_ROOT; };
+		83A7ED5A0FD7C11400908502 /* bullettrain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bullettrain.png; sourceTree = "<group>"; };
+		83A7ED5B0FD7C11400908502 /* car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = car.png; sourceTree = "<group>"; };
+		83A7ED5C0FD7C11400908502 /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
+		83A7ED5D0FD7C11400908502 /* hat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hat.png; sourceTree = "<group>"; };
+		83A7ED5E0FD7C11400908502 /* horse.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = horse.png; sourceTree = "<group>"; };
+		83A7ED5F0FD7C11400908502 /* thimble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = thimble.png; sourceTree = "<group>"; };
+		83A7ED7E0FD7C36700908502 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		83BA2E020F9CFB12005A76F1 /* GameStartupScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameStartupScreen.h; sourceTree = "<group>"; };
 		83BA2E030F9CFB12005A76F1 /* GameStartupScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameStartupScreen.m; sourceTree = "<group>"; };
 		83CABAFC0FCF761E004E80CD /* RailRoadBoardSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RailRoadBoardSpace.h; sourceTree = "<group>"; };
@@ -182,6 +198,9 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				83A7ED590FD7C11400908502 /* pieces */,
+				83A7ED270FD7BEBB00908502 /* die.png */,
+				83A7ED250FD7BDAC00908502 /* person.png */,
 				83F444490FC0E80100704C5E /* background.jpg */,
 				8346B8A60FB9280600FA9908 /* newboardshrunk.png */,
 				83830CC90F9EF78E00C47AAC /* Icon.png */,
@@ -191,7 +210,7 @@
 				28C3AD890F43EF2300507BA6 /* Monopoly.xcdatamodel */,
 				8D1107310486CEB800E47090 /* Monopoly-Info.plist */,
 				839DF34C0F9ECC5600B0235D /* MonopolySpaces.plist */,
-				839EB9180FA19404005CB448 /* Default.png */,
+				83A7ED7E0FD7C36700908502 /* Default.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -240,6 +259,19 @@
 				83DAFEFA0FAD5D23001227D6 /* PreGameSettings.m */,
 			);
 			name = GuiControl;
+			sourceTree = "<group>";
+		};
+		83A7ED590FD7C11400908502 /* pieces */ = {
+			isa = PBXGroup;
+			children = (
+				83A7ED5A0FD7C11400908502 /* bullettrain.png */,
+				83A7ED5B0FD7C11400908502 /* car.png */,
+				83A7ED5C0FD7C11400908502 /* dog.png */,
+				83A7ED5D0FD7C11400908502 /* hat.png */,
+				83A7ED5E0FD7C11400908502 /* horse.png */,
+				83A7ED5F0FD7C11400908502 /* thimble.png */,
+			);
+			path = pieces;
 			sourceTree = "<group>";
 		};
 		83B741460F8C31380038FBB2 /* View */ = {
@@ -368,12 +400,20 @@
 				839EB7F00FA18322005CB448 /* GameScreen.xib in Resources */,
 				839EB7F50FA18335005CB448 /* BoardScreen.xib in Resources */,
 				839EB7FD0FA18442005CB448 /* PlayersScreen.xib in Resources */,
-				839EB9190FA19404005CB448 /* Default.png in Resources */,
 				8384CAD30FAC1AD800309647 /* PlayerScreenDetail.xib in Resources */,
 				83DAFEFD0FAD5D23001227D6 /* PreGameSettings.xib in Resources */,
 				83E807240FAFF4DC00194F55 /* GameTurn.xib in Resources */,
 				8346B8A70FB9280600FA9908 /* newboardshrunk.png in Resources */,
 				83F4444A0FC0E80100704C5E /* background.jpg in Resources */,
+				83A7ED260FD7BDAC00908502 /* person.png in Resources */,
+				83A7ED280FD7BEBB00908502 /* die.png in Resources */,
+				83A7ED600FD7C11400908502 /* bullettrain.png in Resources */,
+				83A7ED610FD7C11400908502 /* car.png in Resources */,
+				83A7ED620FD7C11400908502 /* dog.png in Resources */,
+				83A7ED630FD7C11400908502 /* hat.png in Resources */,
+				83A7ED640FD7C11400908502 /* horse.png in Resources */,
+				83A7ED650FD7C11400908502 /* thimble.png in Resources */,
+				83A7ED7F0FD7C36700908502 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

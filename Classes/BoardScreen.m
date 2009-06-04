@@ -67,7 +67,7 @@
 #pragma mark UIScrollViewDelegate protocol methods
 /**
  Method called by the scroll view when user 'pinches' the enclosed view
- @param pointer to UIScrollView that  called this method
+ @param scroll - pointer to UIScrollView that  called this method
  @return pointer to UIView subclass that should be zoomed
  */
 -(UIView*)viewForZoomingInScrollView:(UIScrollView*)scroll{

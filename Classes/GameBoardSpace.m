@@ -29,7 +29,7 @@
 
 /**
  Required method for 'ActionSpaceProtocol'
- @param p - Player that landed on space
+ @param player - Player that landed on space
  @param board - Gameboard object
  */
 -(void)performSpaceActionsWithBoard:(GameBoard*)board AndPlayer:(Player*)player{

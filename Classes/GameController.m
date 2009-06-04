@@ -32,7 +32,7 @@
 /**
  Constructor
  initlizes game and game defaults.
- @param array of Players to use in the game
+ @param theplayers - array of Players to use in the game
  @return point to self
  */
 -(id)initWithPlayers:(NSArray*)theplayers {
@@ -158,7 +158,7 @@
 
 /**
  Method to handle the game action of paying rent
- @param struct of turn state
+ @param t - struct of turn state
  */
 -(void)payRent:(PlayerGameTurn)t{
 	

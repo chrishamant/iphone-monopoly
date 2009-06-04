@@ -16,7 +16,7 @@
 /**
  Contructor
  @param nibNameOrNil - Name of nib to load views from
- @param nibBundleOrNail - Shared relevant state
+ @param nibBundleOrNil - Shared relevant state
  @return point to self
  */
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {

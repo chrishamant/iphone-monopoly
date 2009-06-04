@@ -14,14 +14,16 @@ MonopolyAppDelegate.m
 
 /**
  Main method to initialze the basic GUI screens after 'Start Game' button
- @param aGame - Monopoly Game to put into GameScreen
+ 
+ @param thegame - Monopoly Game to put into GameScreen
+ 
  */
--(void)startMonopoly:(GameController*)aGame{
+-(void)startMonopoly:(GameController*) thegame{
 	[tab setViewControllers:
 	 [NSArray arrayWithObjects:
-	  [[[GameScreen alloc] initWithGame:aGame] autorelease],
+	  [[[GameScreen alloc] initWithGame:thegame] autorelease],
 	  [[[BoardScreen alloc] initWithNibName:@"BoardScreen" bundle:nil] autorelease],
-	  [[[PlayersScreen alloc] initWithPlayers:aGame.players] autorelease],
+	  [[[PlayersScreen alloc] initWithPlayers:thegame.players] autorelease],
 	  nil]];
 	[tab setSelectedIndex:0];
 	[window addSubview:tab.view];

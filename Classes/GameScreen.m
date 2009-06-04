@@ -17,7 +17,7 @@
 
 /**
  Constructor
- @param point to initialized game with existing players
+ @param g - pointer to initialized game with existing players
  @return pointer to self
  */
 -(id)initWithGame:(GameController*)g{
@@ -96,7 +96,7 @@
 
 /**
  Method that is triggered when current player indicates he is rolling for his turn
- @param pointer to object that triggered this action
+ @param sender - pointer to object that triggered this action
  */
 -(void)rollAction:(id)sender{
 	//PlayerGameTurn turn = [game playerTakeTurn];
@@ -149,7 +149,7 @@
 #pragma mark GameTurnDelegate Protocol
 /**
  Closes the view controller after GameTurn triggered done: method
- @param pointer to GameTurn that called this method
+ @param controller - pointer to GameTurn that called this method
  */
 - (void)turnComplete:(GameTurn*)controller{
 	[self updateDisplay];
@@ -159,7 +159,7 @@
 }
 
 /**
- @param UtilityBoardSpace that needs the roll
+ @param prop - UtilityBoardSpace that needs the roll
  @return Roll struct with dice roll
  */
 -(Roll)getRollforOwnedUtility:(UtilityBoardSpace*)prop{
@@ -185,7 +185,7 @@
 /**
  Method to determine users response
  @param actionSheet - the actionsheet in question
- @paran buttonIndex - which button was clicked
+ @param buttonIndex - which button was clicked
  */
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex{
 	BOOL result;

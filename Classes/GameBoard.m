@@ -7,7 +7,7 @@
  Abstracts the concept of figuring out where on the board the player lands
  
  @param fromSpace - Indicates starting location on board
- @param numSpace - Number of spaces from 'fromSpace' to advance to
+ @param numSpaces - Number of spaces from 'fromSpace' to advance to
  @return GameBoardSpace - Pointer to GameBoardSpace landed on
  */
 -(GameBoardSpace*) getNewSpace:(GameBoardSpace*)fromSpace rolling:(int)numSpaces{
@@ -96,7 +96,7 @@
 /**
  Method to build the proper 'Action' Space from the space's title.
  This tightly couples the space's name to this method... but at least it doesn't care about the order on the board.
- @param dictionary from the .plist
+ @param dict - dictionary from the .plist
  @return proper GameBoardSpace class conforming to ActionBoardSpace protocol
  */
 -(GameBoardSpace<ActionBoardSpace>*)buildActionSpaceFromDict:(NSDictionary*)dict{

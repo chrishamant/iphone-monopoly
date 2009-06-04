@@ -27,9 +27,9 @@
 
 /**
  This function is kind of a hack to instantiate and start up game once options are set.
- @param game - Game created from pregame View Controller. 
+ @param thegame - Game created from pregame View Controller. 
  */
--(void)startMonopoly:(GameController*)game;
+-(void)startMonopoly:(GameController*) thegame;
 
 #pragma mark property declarations
 /*@property (nonatomic, retain, readonly) NSManagedObjectModel *managedObjectModel;

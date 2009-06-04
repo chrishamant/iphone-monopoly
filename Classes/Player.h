@@ -1,8 +1,10 @@
-//
-//  Player.h
-//  Monopoly
-//
-//
+/**
+ @class Player
+ @file Player.h
+ @author Chris Hamant
+ 
+ Class to represent a player in a Monopoly game
+ */
 
 #import <Foundation/Foundation.h>
 #import "GameBoardSpace.h"

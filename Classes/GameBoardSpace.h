@@ -1,11 +1,16 @@
-//
-//  GameBoardSpace.h
-//  Monopoly
-//
-//
+/**
+ @class GameBoardSpace
+ @file GameBoardSpace.h
+ @author Chris Hamant
+ 
+ Base class for all types of spaces on the board.
+ */
 
 #import <Foundation/Foundation.h>
 
+/**
+ Enum type to give class
+ */
 typedef enum{
 	REGULAR,
 	RAILROAD,
